@@ -5,12 +5,12 @@ private:
   int points;
   int cash;
   bool bankrot;
-  struct pos {
-    int x,y;
-  }
+  int pos;
   int fieldCount;
 public:
   Player();
+  Player(int*& money);
+  ~Player();
   bool buy(int*& money);
   bool ifBankrot(int*& money, bool*& bankrot);
   int getPos();
