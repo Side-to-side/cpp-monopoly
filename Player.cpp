@@ -7,13 +7,15 @@ Player::Player() {
   pos = 0;
   fieldCount = 0;
 }
-/*Player::Player(int*& money) {
-  points =0;
-  cash = money;
-  bankrot = false;
-  pos = 0;
-  fieldCount = 0;
-}*/
+
+Player::Player(int Tpoints,int Tcash, bool Tbankrot, int Tpos, int Tfield) {
+    points = Tpoints;
+    cash = Tcash;
+    bankrot = Tbankrot;
+    pos = Tpos;
+    fieldCount = Tfield;
+}
+
 Player::~Player(){
   points = -1;
   cash = 0;
@@ -21,11 +23,26 @@ Player::~Player(){
   pos = -1;
   fieldCount = -1;
 }
-/*Player::ifBankrot(int money, bool*& bankrot) {
+bool Player::ifBankrot(int money) {
   if (money <= 0) {
-    bankrot = true;
+      return true;
   }
+  return false;
+}/**/
+bool Player::buy(int money){
+    if (money > 0)
+    money--;
+    return 0;
 }
-Player::buy(int*& money){
-
-}*/
+int Player::getPos() {
+    return pos;
+}
+int Player::getPoints() {
+    return points;
+}
+int Player::getCash() {
+    return cash;
+}
+int Player::getField() {
+    return fieldCount;
+}
