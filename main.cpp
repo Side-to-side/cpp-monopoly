@@ -1,8 +1,7 @@
-#include <iostream>
-#include "Player.h"
-
-using namespace std;
+#include "Test.h"
 
 int main(){
-    std::cout << "Hello Monopoly!\n";
+    Test t;
+    t.tests();
+    return 0;
 }
