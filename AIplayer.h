@@ -4,10 +4,10 @@
 #include "AbstractPlayer.h"
 #include "Field.h"
 
-class AI : public abstractPlayer {
+class AI : public AbstractPlayer {
 public:
 	AI(const std::string& Name, int Playerid)
-		: abstractPlayer(Name, Playerid) {}
+		: AbstractPlayer(Name, Playerid) {}
 	void buyfield(Field idfield);
 private:
 };

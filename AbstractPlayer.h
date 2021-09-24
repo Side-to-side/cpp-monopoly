@@ -2,28 +2,24 @@
 #include <string>
 #include "Field.h"
 
-class abstractPlayer {
+class AbstractPlayer {
 public:
-	abstractPlayer();
-	abstractPlayer(const std::string& Name, int Playerid);
-	abstractPlayer(const abstractPlayer& P);
-	std::string Name();
+	AbstractPlayer();
+	AbstractPlayer(const std::string& Name, int Playerid);
+	AbstractPlayer(const AbstractPlayer& P);
+	void name(const std::string name);
 	void IDplayers(int id);
 	void Cash(int a);
 	void ifBankrot(bool a);
 	void getPos(int pos);
 
 //protected:
-	std::string name;
+	std::string namePlayer;
 	int ID;
 	int cash;
 	bool bankrot;
 	int pos;
 
 private:
-	/*std::string name;
-	int ID;
-	int cash;
-	bool bankrot;
-	int pos;*/
+
 };

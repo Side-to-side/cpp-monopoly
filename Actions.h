@@ -3,4 +3,4 @@
 #include <vector>
 #include "AbstractPlayer.h"
 
-void trade(abstractPlayer player1, abstractPlayer player2);
+void trade(AbstractPlayer player1, AbstractPlayer player2);
