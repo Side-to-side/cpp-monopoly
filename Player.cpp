@@ -1,6 +1,13 @@
 #include "Player.h"
 
-Player::Player() {
+void Player::buyfield(Field field) {
+    if (field.bought == false && cash > field.fieldCost) {
+        field.bought = true;
+        cash -= field.bought;
+        field.idPlayer = ID;
+    }
+}
+/*Player::Player() {
   points = 0;
   cash = 15000;
   bankrot = false;
@@ -28,7 +35,7 @@ bool Player::ifBankrot(int money) {
       return true;
   }
   return false;
-}/**/
+}
 bool Player::buy(int money){
     if (money > 0)
     money--;
@@ -45,4 +52,4 @@ int Player::getCash() {
 }
 int Player::getField() {
     return fieldCount;
-}
+}*/
