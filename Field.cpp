@@ -1,6 +1,6 @@
 #include "Field.h"
 
-Field::Field() {
+Field::Field() { //f5
 	ID = 0;
 	group = 0;
 	fieldCost = 0;
