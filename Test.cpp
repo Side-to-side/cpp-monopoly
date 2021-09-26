@@ -1,9 +1,11 @@
 #include "Test.h"
+#include "Cubes.h"
 
 void Test::tests() {
 	test0();
 	test1();
 	test2();
+	test3();
 }
 
 void Test::test0() {
@@ -33,4 +35,15 @@ void Test::test2() {
 	std::cout << "id: " << f.ID << std::endl;
 	std::cout << "cost: " << f.fieldCost << std::endl;
 	std::cout << "--------------------------------\n";
+}
+
+void Test::test3() {
+	std::cout << "test 3: \t";
+	std::cout << "Check the cube \n\n";
+	std::cout << "Value from 1 to 6 \n";
+	Cube first, second;
+	first.randValue();
+	second.randValue();
+	std::cout << first.getValue() << "\n\n";
+	std::cout << second.getValue() << "\n\n";
 }
