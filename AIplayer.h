@@ -11,3 +11,4 @@ public:
 	void buyfield(Field idfield);
 private:
 };
+//дайте пожрать
