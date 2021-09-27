@@ -31,7 +31,7 @@ void Test::test2() {
 	std::cout << "Test 2:\n";
 	std::cout << "check class constructor Field, ";
 	std::cout << "the output should be\nid: 3\ncost: 4000\n\noutput\n";
-	Field f(3,4000);
+	Field f(3,0, 4000);
 	std::cout << "id: " << f.ID << std::endl;
 	std::cout << "cost: " << f.fieldCost << std::endl;
 	std::cout << "--------------------------------\n";

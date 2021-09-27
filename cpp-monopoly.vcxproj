@@ -147,6 +147,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monopoly.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="BasicField.cpp" />
+    <ClCompile Include="SelectiveField.cpp" />
+    <ClCompile Include="QuestionField.cpp" />
+    <ClCompile Include="GiftField.cpp" />
+    <ClCompile Include="PortalField.cpp" />
+    <ClCompile Include="StartField.cpp" />
+    <ClCompile Include="PolyanaField.cpp" />
+    <ClCompile Include="VadimField.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +163,14 @@
     <ClInclude Include="AIplayer.h" />
     <ClInclude Include="Cubes.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="BasicField.h" />
+    <ClInclude Include="SelectiveField.h" />
+    <ClInclude Include="QuestionField.h" />
+    <ClInclude Include="GiftField.h" />
+    <ClInclude Include="PortalField.h" />
+    <ClInclude Include="StartField.h" />
+    <ClInclude Include="PolyanaField.h" />
+    <ClInclude Include="VadimField.h" />
     <ClInclude Include="Monopoly.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayGround.h" />
