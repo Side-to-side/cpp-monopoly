@@ -9,6 +9,7 @@ Field::Field() {
 	//nameField = "UNKNOWM";
 	//forPurchase = false;
 	type = -1;
+	
 }
 
 Field::Field(int t_id, int t_cost, int t_group) {
