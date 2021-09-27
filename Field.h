@@ -20,14 +20,14 @@ public:
 	//std::string nameField;
 	//bool forPurchase;
 
-	/*BasicField* ptrBasic;
+	BasicField* ptrBasic;
 	SelectiveField* ptrSelective;
 	QuestionField* ptrQuestion;
 	GiftField* ptrGift;
 	PortalField* ptrPortal;
 	StartField* ptrStart;
 	PolyanaField* ptrPolyana;
-	VadimField* ptrVadim;*/
+	VadimField* ptrVadim;
 	
 
 	Field();
