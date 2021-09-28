@@ -62,14 +62,11 @@ void Monopoly::startGame() {
 	BasicField f40(40, 0, 9);
 	BasicField f41(41, 0, 9);
 	BasicField f42(42, 0, 9);
-
-
-
-
-
-
 }
 
 void Monopoly::updateGame() {
-	
+	bool active = 1;
+	while (active) {
+
+	}
 }

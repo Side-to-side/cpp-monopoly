@@ -154,6 +154,7 @@
     <ClCompile Include="PortalField.cpp" />
     <ClCompile Include="StartField.cpp" />
     <ClCompile Include="PolyanaField.cpp" />
+    <ClCompile Include="Statistik.cpp" />
     <ClCompile Include="VadimField.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
@@ -170,6 +171,7 @@
     <ClInclude Include="PortalField.h" />
     <ClInclude Include="StartField.h" />
     <ClInclude Include="PolyanaField.h" />
+    <ClInclude Include="Statistik.h" />
     <ClInclude Include="VadimField.h" />
     <ClInclude Include="Monopoly.h" />
     <ClInclude Include="Player.h" />
