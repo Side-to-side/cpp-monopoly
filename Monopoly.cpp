@@ -14,7 +14,7 @@ void Monopoly::menu() {
 void Monopoly::startGame() {
 	int id = 0;
 	for (int i = 0; i < numberPlayers; i++) {
-		AI a("Bot", id);
+		Player a("Human", id);
 		vec_abstractPlayer.push_back(a);
 		id++;
 	}
