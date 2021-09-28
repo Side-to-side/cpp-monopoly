@@ -12,13 +12,20 @@ void Monopoly::menu() {
 }
 
 void Monopoly::startGame() {
-	/*int id = 0;
+	int id = 0;
+	for (int i = 0; i < numberPlayers; i++) {
+		AI a("Bot", id);
+		vec_abstractPlayer.push_back(a);
+		id++;
+	}
 	for (int i = 0; i < numberBots; i++) {
 		AI a("Bot", id);
-		vecAI.push_back(a);
+		vec_abstractPlayer.push_back(a);
 		id++;
-	}*/
-
+	}
+	for (int i = 0; i < numberBots + numberPlayers; i++) {
+		std::cout << vec_abstractPlayer[i].ID << " " << vec_abstractPlayer[i].pos << std::endl;
+	}
 	StartField f0(0, -1, 1);
 	BasicField f1(1, 0, 1);
 	BasicField f2(2, 0, 1);

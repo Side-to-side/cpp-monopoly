@@ -20,7 +20,7 @@ public:
 private:
 	int numberPlayers;
 	int numberBots;
-	std::vector<AI> vecAI;
+	std::vector<AbstractPlayer> vec_abstractPlayer;
 	
 	std::vector<Field> map;
 };
