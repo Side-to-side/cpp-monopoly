@@ -46,4 +46,5 @@ void Test::test3() {
 	second.randValue();
 	std::cout << first.getValue() << "\n\n";
 	std::cout << second.getValue() << "\n\n";
+	std::cout << "--------------------------------\n";
 }
