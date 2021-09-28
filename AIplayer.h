@@ -10,5 +10,5 @@ public:
 		: AbstractPlayer(Name, Playerid) {}
 	void buyfield(Field idfield);
 private:
+	friend AbstractPlayer;
 };
-//дайте пожрать
