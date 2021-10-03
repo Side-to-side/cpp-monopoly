@@ -11,6 +11,7 @@
 #include "StartField.h";
 #include "PolyanaField.h";
 #include "VadimField.h";
+#include "Cubes.h"
 
 class Monopoly {
 public:
