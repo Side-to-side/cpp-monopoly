@@ -3,4 +3,4 @@
 #include <vector>
 #include "AbstractPlayer.h"
 
-void trade(AbstractPlayer player1, AbstractPlayer player2);
+void trade(std::unique_ptr<AbstractPlayer> player1, std::unique_ptr<AbstractPlayer> player2);

@@ -178,6 +178,9 @@
     <ClInclude Include="PlayGround.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="dataMAP.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

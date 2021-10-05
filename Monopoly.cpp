@@ -28,7 +28,7 @@ void Monopoly::startGame() {
 		//std::cout << players[i]->srarodubbb() << " " << vec_abstractPlayer[i].pos << std::endl;
 	}
 
-	StartField f0(0, -1, 1); // это впихнуть в какой-то файлик что-бы Ѕулах это не видел :)
+	/*StartField f0(0, -1, 1); // это впихнуть в какой-то файлик что-бы Ѕулах это не видел :)
 	BasicField f1(1, 0, 1);
 	BasicField f2(2, 0, 1);
 	BasicField f3(3, 0, 1);
@@ -70,7 +70,15 @@ void Monopoly::startGame() {
 	QuestionField f39(39, -1, 11);
 	BasicField f40(40, 0, 9);
 	BasicField f41(41, 0, 9);
-	BasicField f42(42, 0, 9);
+	BasicField f42(42, 0, 9);*/
+	std::ifstream f("dataMAP.txt");
+	while (!f.eof()) {
+		std::string name;
+		int id, group, cost;
+		f >> name >> id >> group >> cost;
+		//name a = {id, group, cost};
+		//map.push_back(std::make_unique<Field>({id, group, cost}));
+	}
 	Cube Cube1;
 	Cube Cube2;
 }
@@ -82,7 +90,7 @@ void Monopoly::updateGame() {
 		{	
 			std::cout << "Set cubes\n";
 			
-			vec_abstractPlayer[i].ID;
+			players[i]->ID;
 		}
 	}
 }
