@@ -40,6 +40,7 @@ void AbstractPlayer::ifBankrot(bool a) {
 	bankrot = a;
 }
 
+// Это set
 void AbstractPlayer::getPos(int p) {
 	pos = p;
 }

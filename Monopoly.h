@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "AbstractPlayer.h"
 #include "AIplayer.h"
 #include "Player.h"
 #include "BasicField.h";
@@ -20,7 +21,8 @@ public:
 private:
 	int numberPlayers;
 	int numberBots;
-	std::vector<AbstractPlayer> vec_abstractPlayer;
-	
+	//std::vector<AbstractPlayer> vec_abstractPlayer;
+	std::vector<std::unique_ptr<AbstractPlayer>> players;
+
 	std::vector<Field> map;
 };

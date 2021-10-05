@@ -15,18 +15,20 @@ void Monopoly::startGame() {
 	int id = 0;
 	for (int i = 0; i < numberPlayers; i++) {
 		Player a("Human", id);
-		vec_abstractPlayer.push_back(a);
+		players.push_back(std::make_unique<Player>(a));
 		id++;
 	}
 	for (int i = 0; i < numberBots; i++) {
 		AI a("Bot", id);
-		vec_abstractPlayer.push_back(a);
+		players.push_back(std::make_unique<AI>(a));
 		id++;
 	}
-	for (int i = 0; i < numberBots + numberPlayers; i++) {
-		std::cout << vec_abstractPlayer[i].ID << " " << vec_abstractPlayer[i].pos << std::endl;
+	for (int i = 0; i < players.size(); i++) {
+		players[i]->srarodubbb();
+		//std::cout << players[i]->srarodubbb() << " " << vec_abstractPlayer[i].pos << std::endl;
 	}
-	StartField f0(0, -1, 1);
+
+	StartField f0(0, -1, 1); // это впихнуть в какой-то файлик что-бы Ѕулах это не видел :)
 	BasicField f1(1, 0, 1);
 	BasicField f2(2, 0, 1);
 	BasicField f3(3, 0, 1);

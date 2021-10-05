@@ -19,6 +19,7 @@ public:
 	int cash;
 	bool bankrot;
 	int pos;
+	virtual void srarodubbb() = 0;
 
 private:
 
