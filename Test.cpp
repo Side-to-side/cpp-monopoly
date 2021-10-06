@@ -1,5 +1,5 @@
 #include "Test.h"
-#include "Cubes.h"
+#include "Dice.h"
 
 void Test::tests() {
 	test0();
@@ -39,9 +39,9 @@ void Test::test2() {
 
 void Test::test3() {
 	std::cout << "test 3: \t";
-	std::cout << "Check the cube \n\n";
+	std::cout << "Check the Dice \n\n";
 	std::cout << "Value from 1 to 6 \n";
-	Cube first, second;
+	Dice first, second;
 	first.randValue();
 	second.randValue();
 	std::cout << first.getValue() << "\n\n";

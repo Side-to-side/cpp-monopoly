@@ -7,24 +7,19 @@
 #include "AIplayer.h"
 #include "Player.h"
 #include "Actions.h"
-/*#include "BasicField.h";
-#include "SelectiveField.h";
-#include "QuestionField.h";
-#include "GiftField.h";
-#include "PortalField.h";
-#include "StartField.h";
-#include "PolyanaField.h";
-#include "VadimField.h";*/
-#include "Cubes.h"
+#include "Dice.h"
 
 class Monopoly {
 public:
-	void menu();		// фунція меню
-	void startGame();	// функция с начальными данными (Стародуб)
-	void updateGame();	// сама игра (Наташа)
+	void menu();
+	void startGame();	// function with initial data
+	void updateGame();	// the game
 private:
 	int numberPlayers = 0;
 	int numberBots = 0;
+
+	Dice Dice1;
+	Dice Dice2;
 
 	std::vector<std::unique_ptr<AbstractPlayer>> players;
 	std::vector<std::unique_ptr<Field>> map;

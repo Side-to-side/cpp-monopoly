@@ -142,7 +142,7 @@
     <ClCompile Include="AbstractPlayer.cpp" />
     <ClCompile Include="Actions.cpp" />
     <ClCompile Include="AIplayer.cpp" />
-    <ClCompile Include="Cubes.cpp" />
+    <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monopoly.cpp" />
@@ -162,7 +162,7 @@
     <ClInclude Include="AbstractPlayer.h" />
     <ClInclude Include="Actions.h" />
     <ClInclude Include="AIplayer.h" />
-    <ClInclude Include="Cubes.h" />
+    <ClInclude Include="Dice.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="BasicField.h" />
     <ClInclude Include="SelectiveField.h" />
@@ -175,7 +175,6 @@
     <ClInclude Include="VadimField.h" />
     <ClInclude Include="Monopoly.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayGround.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>

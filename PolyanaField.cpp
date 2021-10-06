@@ -1,7 +1,3 @@
 #include "PolyanaField.h"
 
-//PolyanaField::PolyanaField(int t_id, int t_cost, int t_group) {
-//	type = 7;
-//}
-
-
+// functions for the PolyanaField class will be located here

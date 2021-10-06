@@ -6,8 +6,6 @@ Field::Field() {
 	fieldCost = 0;
 	bought = false;
 	idPlayer = -1;
-	//nameField = "UNKNOWM";
-	//forPurchase = false;
 	type = -1;
 	
 }
@@ -28,8 +26,6 @@ Field::Field(const Field& P) {
 	bought = P.bought;
 	idPlayer = P.idPlayer;
 	type = -1;
-	//nameField = P.nameField;
-	//forPurchase = P.forPurchase;
 }
 
 void Field::getID(int id) {

@@ -8,11 +8,10 @@ class AI : public AbstractPlayer {
 public:
 	AI(const std::string& Name, int Playerid)
 		: AbstractPlayer(Name, Playerid) {}
-	void buyfield(Field idfield);
 
-	void srarodubbb() {
-		std::cout << "Andrey good malchik!!!\n";
-	}
+	void buyField(Field field);
+	void trade(std::unique_ptr<AbstractPlayer>& player1, std::unique_ptr<AbstractPlayer>& player2);
+
 private:
 	
 };

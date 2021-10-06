@@ -24,19 +24,17 @@ void Monopoly::startGame() {
 		id++;
 	}
 
-	fieldCreation();
-	//Cube Cube1;
-	//Cube Cube2;
+	map = fieldCreation();
+	
 }
 
 void Monopoly::updateGame() {
-	bool active = 1;
-	/*while (active) {
-		for (int i = 0; i < numberPlayers; i++)
-		{	
-			std::cout << "Set cubes\n";
-			
-			players[i]->ID;
-		}
-	}*/
+	std::cout << "-----------------\n";
+	std::cout << "The game begins\n";
+	std::cout << "There are " << players.size() << " participants in the game\n";
+	std::cout << "The game starts with the first player\n";
+
+	Dice1.randValue();
+	Dice2.randValue();
+
 }

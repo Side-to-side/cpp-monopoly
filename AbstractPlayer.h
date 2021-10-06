@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <memory>
 #include "Field.h"
 
 class AbstractPlayer {
@@ -13,13 +14,15 @@ public:
 	void ifBankrot(bool a);
 	void getPos(int pos);
 
+	virtual void buyField(Field field) = 0;
+	virtual void trade(std::unique_ptr<AbstractPlayer>& player1, std::unique_ptr<AbstractPlayer>& player2) = 0;
+
 //protected:
 	std::string namePlayer;
 	int ID;
 	int cash;
 	bool bankrot;
 	int pos;
-	virtual void srarodubbb() = 0;
 
 private:
 

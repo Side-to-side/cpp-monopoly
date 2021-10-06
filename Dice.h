@@ -1,5 +1,5 @@
 
-class Cube {
+class Dice {
 private: 
 	int value;
 public:

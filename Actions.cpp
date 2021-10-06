@@ -1,29 +1,12 @@
 #include "Actions.h"
 
-void trade(std::unique_ptr<AbstractPlayer> player1, std::unique_ptr<AbstractPlayer> player2){
-	std::cout << "Trade" << std::endl;
-	std::cout << player1->namePlayer << " and " << player2->namePlayer << std::endl << std::endl;
-	std::cout << player1->namePlayer << " fields: ";
-
-	std::vector <int> idFieldPlayer1;
-	std::vector <int> idFieldPlayer2;
-
-	int idField;
-	while (std::cin >> idField) {
-		idFieldPlayer1.push_back(idField);
-	}
-	std::cout << std::endl << player2->namePlayer << " fields: ";
-	while (std::cin >> idField) {
-		idFieldPlayer2.push_back(idField);
-	}
-
-}
-
 bool mySort(const std::unique_ptr<Field>& a, const std::unique_ptr<Field>& b) {
 	return a->ID < b->ID;
 }
 
-void fieldCreation() {
+// function to transfer field data from files to vector
+
+std::vector<std::unique_ptr<Field>> fieldCreation() {
 	std::vector<std::unique_ptr<Field>> map;
 	std::ifstream f("BasicField.txt");
 	while (!f.eof()) {
@@ -75,7 +58,6 @@ void fieldCreation() {
 		GiftField field(id, group, cost);
 		map.push_back(std::make_unique<GiftField>(field));
 	}
-	std::cout << "ok";
 
 	std::ifstream f6("SelectiveField.txt");
 	while (!f6.eof()) {
@@ -84,10 +66,8 @@ void fieldCreation() {
 		SelectiveField field(id, group, cost);
 		map.push_back(std::make_unique<SelectiveField>(field));
 	}
-	std::cout << "ok";
 
 	std::sort(map.begin(), map.end(), mySort);
-	for (int i = 0; i < map.size(); i++) {
-		std::cout << map[i]->ID << std::endl;
-	}
+	
+	return map;
 }

@@ -14,5 +14,5 @@
 #include "GiftField.h"
 #include "SelectiveField.h"
 
-void trade(std::unique_ptr<AbstractPlayer> player1, std::unique_ptr<AbstractPlayer> player2);
-void fieldCreation();
+std::vector<std::unique_ptr<Field>> fieldCreation();
+bool mySort(const std::unique_ptr<Field>& a, const std::unique_ptr<Field>& b);

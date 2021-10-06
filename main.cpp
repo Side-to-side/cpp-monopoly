@@ -3,15 +3,13 @@
 
 int main(){
     
-    Test t;     // тестування програми
+    Test t;     // testing the program
     t.tests();
 
-    Monopoly m; // гра
+    Monopoly m; // the game
     m.menu();
     m.startGame();
     m.updateGame();
 
     return 0;
-    
-    
 }

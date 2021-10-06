@@ -1,7 +1,3 @@
 #include "StartField.h"
 
-//StartField::StartField(int t_id, int t_cost, int t_group) {
-//	type = 6;
-//}
-
-
+// functions for the StartField class will be located here

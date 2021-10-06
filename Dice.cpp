@@ -1,12 +1,12 @@
-#include "Cubes.h"
+#include "Dice.h"
 #include <iostream>
 #include <random>
 
-int Cube::getValue() {
+int Dice::getValue() {
 	return value;
 }
 
-int Cube::randValue() {
+int Dice::randValue() {
 	std::random_device generation;
 	value = generation() % 6 + 1;
 	return value;
