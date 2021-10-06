@@ -127,7 +127,28 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="dataMAP.txt">
+    <Text Include="BasicField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="StartField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="VadimField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="QuestionField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="PortalField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="SelectiveField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="PolyanaField.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="GiftField.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

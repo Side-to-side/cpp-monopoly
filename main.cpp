@@ -3,10 +3,10 @@
 
 int main(){
     
-    Test t;     // штука для тестиков, если вам надо что-то проверить заливайте туда
+    Test t;     // тестування програми
     t.tests();
 
-    Monopoly m; // сама игра
+    Monopoly m; // гра
     m.menu();
     m.startGame();
     m.updateGame();

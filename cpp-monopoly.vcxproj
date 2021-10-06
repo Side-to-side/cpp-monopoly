@@ -179,7 +179,14 @@
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="dataMAP.txt" />
+    <Text Include="BasicField.txt" />
+    <Text Include="GiftField.txt" />
+    <Text Include="PolyanaField.txt" />
+    <Text Include="PortalField.txt" />
+    <Text Include="QuestionField.txt" />
+    <Text Include="SelectiveField.txt" />
+    <Text Include="StartField.txt" />
+    <Text Include="VadimField.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
