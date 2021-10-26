@@ -8,8 +8,6 @@ on the topic: "Monopoly"
 
 Performed by students of group DA-02:
 
-	Lesechko Olesya
-
-	Molodid Egor
-
-	Tishchenko Natalia
+Lesechko Olesya
+Molodid Egor
+Tishchenko Natalia
