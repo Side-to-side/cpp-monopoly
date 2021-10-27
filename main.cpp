@@ -1,5 +1,15 @@
-#include <iostream>
+#include "Test.h"
+#include "Monopoly.h"
 
 int main(){
-    std::cout << "Hello Monopoly!\n";
+    
+    Test t;     // testing the program
+    t.tests();
+
+    Monopoly m; // the game
+    m.menu();
+    m.startGame();
+    m.updateGame();
+
+    return 0;
 }

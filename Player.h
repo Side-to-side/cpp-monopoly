@@ -1,18 +1,17 @@
 #pragma once
+#include <string>
+#include <iostream>
+#include "AbstractPlayer.h"
+#include "Field.h"
 
-class Player {
-private:
-	int points;
-	int cash;
-	bool bankrot;
-	int pos;
-	int fieldCount;
+class Player : public AbstractPlayer {
 public:
-	Player();
-	Player(int*& money);
-	~Player();
-	bool buy(int*& money);
-	bool ifBankrot(int*& money, bool*& bankrot);
-	int getPos();
-	int pointCount(int*& points);
+	Player(const std::string& Name, int Playerid)
+		: AbstractPlayer(Name, Playerid) {}
+	void buyField(Field field);
+	void trade(std::unique_ptr<AbstractPlayer>& player1, std::unique_ptr<AbstractPlayer>& player2);
+
+private:
 };
+
+
