@@ -24,8 +24,7 @@ void Monopoly::startGame() {
 		id++;
 	}
 
-	map = fieldCreation();
-	
+	fieldCreation();
 }
 
 void Monopoly::updateGame() {

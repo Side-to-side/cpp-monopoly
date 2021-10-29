@@ -3,11 +3,15 @@
 #include <vector>
 #include <fstream>
 #include <string>
-#include "AbstractPlayer.h"
-#include "AIplayer.h"
-#include "Player.h"
-#include "Actions.h"
-#include "Dice.h"
+
+#include "../players/AbstractPlayer.h"
+#include "../players/AIplayer.h"
+#include "../players/Player.h"
+
+#include "../game/Actions.h"
+#include "../game/Dice.h"
+
+#include "../fields/Field.h"
 
 class Monopoly {
 public:
