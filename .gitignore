@@ -1,5 +1,6 @@
 .vs
 .replit
+.breakpoints
 out
 x64
 **/*.vcxproj*
