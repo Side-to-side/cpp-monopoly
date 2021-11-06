@@ -1,3 +1,5 @@
 .vs
+.replit
+out
 x64
 **/*.vcxproj*

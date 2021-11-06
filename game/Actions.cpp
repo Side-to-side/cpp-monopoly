@@ -2,14 +2,14 @@
 
 #include "../fields/Field.h"
 
-#include "C:/Users/lesec/Desktop/cpp-monopoly/lib/json.hpp"
+#include "../lib/json.hpp"
 
 // function to transfer field data from files to vector
 
 std::vector<std::unique_ptr<Field>> fieldCreation() {
     std::vector<std::unique_ptr<Field>> vec;
 
-    std::ifstream fin("C:/Users/lesec/Desktop/cpp-monopoly/resources/dataFields.json");
+    std::ifstream fin("resources/dataFields.json");
     json data = json::parse(fin);
     fin.close();
 
