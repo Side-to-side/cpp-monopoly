@@ -139,53 +139,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AbstractPlayer.cpp" />
-    <ClCompile Include="Actions.cpp" />
-    <ClCompile Include="AIplayer.cpp" />
-    <ClCompile Include="Dice.cpp" />
-    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="fields\BasicField.cpp" />
+    <ClCompile Include="fields\Field.cpp" />
+    <ClCompile Include="fields\GiftField.cpp" />
+    <ClCompile Include="fields\PolyanaField.cpp" />
+    <ClCompile Include="fields\PortalField.cpp" />
+    <ClCompile Include="fields\QuestionField.cpp" />
+    <ClCompile Include="fields\SelectiveField.cpp" />
+    <ClCompile Include="fields\StartField.cpp" />
+    <ClCompile Include="fields\VadimField.cpp" />
+    <ClCompile Include="game\Actions.cpp" />
+    <ClCompile Include="game\Dice.cpp" />
+    <ClCompile Include="game\Monopoly.cpp" />
+    <ClCompile Include="game\Statistik.cpp" />
+    <ClCompile Include="game\Test.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Monopoly.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="BasicField.cpp" />
-    <ClCompile Include="SelectiveField.cpp" />
-    <ClCompile Include="QuestionField.cpp" />
-    <ClCompile Include="GiftField.cpp" />
-    <ClCompile Include="PortalField.cpp" />
-    <ClCompile Include="StartField.cpp" />
-    <ClCompile Include="PolyanaField.cpp" />
-    <ClCompile Include="Statistik.cpp" />
-    <ClCompile Include="VadimField.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="players\AbstractPlayer.cpp" />
+    <ClCompile Include="players\AIplayer.cpp" />
+    <ClCompile Include="players\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractPlayer.h" />
-    <ClInclude Include="Actions.h" />
-    <ClInclude Include="AIplayer.h" />
-    <ClInclude Include="Dice.h" />
-    <ClInclude Include="Field.h" />
-    <ClInclude Include="BasicField.h" />
-    <ClInclude Include="SelectiveField.h" />
-    <ClInclude Include="QuestionField.h" />
-    <ClInclude Include="GiftField.h" />
-    <ClInclude Include="PortalField.h" />
-    <ClInclude Include="StartField.h" />
-    <ClInclude Include="PolyanaField.h" />
-    <ClInclude Include="Statistik.h" />
-    <ClInclude Include="VadimField.h" />
-    <ClInclude Include="Monopoly.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Test.h" />
+    <ClInclude Include="fields\BasicField.h" />
+    <ClInclude Include="fields\Field.h" />
+    <ClInclude Include="fields\GiftField.h" />
+    <ClInclude Include="fields\PolyanaField.h" />
+    <ClInclude Include="fields\PortalField.h" />
+    <ClInclude Include="fields\QuestionField.h" />
+    <ClInclude Include="fields\SelectiveField.h" />
+    <ClInclude Include="fields\StartField.h" />
+    <ClInclude Include="fields\VadimField.h" />
+    <ClInclude Include="game\Actions.h" />
+    <ClInclude Include="game\Dice.h" />
+    <ClInclude Include="game\Monopoly.h" />
+    <ClInclude Include="game\Statistik.h" />
+    <ClInclude Include="game\Test.h" />
+    <ClInclude Include="players\AbstractPlayer.h" />
+    <ClInclude Include="players\AIplayer.h" />
+    <ClInclude Include="players\Player.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="BasicField.txt" />
-    <Text Include="GiftField.txt" />
-    <Text Include="PolyanaField.txt" />
-    <Text Include="PortalField.txt" />
-    <Text Include="QuestionField.txt" />
-    <Text Include="SelectiveField.txt" />
-    <Text Include="StartField.txt" />
-    <Text Include="VadimField.txt" />
+    <None Include="resources\dataFields.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
-#include "Dice.h"
 #include <iostream>
 #include <random>
+
+#include "Dice.h"
 
 int Dice::getValue() {
 	return value;
