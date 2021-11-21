@@ -24,6 +24,7 @@ public:
 	int cash;
 	bool bankrot;
 	int pos;
+	bool skip;
 
 private:
 

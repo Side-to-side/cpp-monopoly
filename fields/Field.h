@@ -19,6 +19,8 @@ public:
 	void getFieldCost(int cost);
 	void getBought(bool b);
 	void getIDPlayer(int IDplayer);
+	
+
 
 private:
 

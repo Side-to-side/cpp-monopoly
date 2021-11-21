@@ -6,6 +6,7 @@ AbstractPlayer::AbstractPlayer() {
 	cash = 0;
 	bankrot = 0;
 	pos = 0;
+	skip = 0;
 }
 
 AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
@@ -14,6 +15,7 @@ AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 	cash = 0;
 	bankrot = 0;
 	pos = 0;
+	skip = 0;
 }
 
 AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {
@@ -22,6 +24,7 @@ AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {
 	cash = p.cash;
 	bankrot = p.bankrot;
 	pos = p.pos;
+	skip = p.skip;
 }
 
 void AbstractPlayer::name(const std::string name) {
