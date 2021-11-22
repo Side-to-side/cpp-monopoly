@@ -1,4 +1,5 @@
 #include "SelectiveField.h"
+
 void SelectiveField::action(std::unique_ptr<AbstractPlayer>& player) {
 
 }

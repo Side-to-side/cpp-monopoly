@@ -1,4 +1,5 @@
 #include "QuestionField.h"
+
 void QuestionField::action(std::unique_ptr<AbstractPlayer>& player) {
 
 }

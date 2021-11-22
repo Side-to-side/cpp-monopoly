@@ -1,8 +1,8 @@
-#pragma once
 #include <iostream>
-#include <vector>
-#include <algorithm>
 #include <fstream>
+#include <vector>
+#include <memory>
+#include <unordered_map>
 
 #include "../players/AbstractPlayer.h"
 
@@ -15,5 +15,7 @@
 #include "../fields/PolyanaField.h"
 #include "../fields/GiftField.h"
 #include "../fields/SelectiveField.h"
+
+#include "../lib/json.hpp"
 
 std::vector<std::unique_ptr<Field>> fieldCreation();

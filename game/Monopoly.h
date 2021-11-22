@@ -16,7 +16,7 @@
 class Monopoly {
 public:
 	void menu();
-	void startGame();	// function with initial data
+	void startGame();   // function with initial data
 	void updateGame();	// the game
 private:
 	int numberPlayers = 0;

@@ -1,4 +1,5 @@
 #include "BasicField.h"
+
 void BasicField::action(std::unique_ptr<AbstractPlayer>& player) {
 
 }

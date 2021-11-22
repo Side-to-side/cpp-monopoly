@@ -1,18 +1,25 @@
 #pragma once
 
+#include <random>
+
 #include "Field.h"
+
 #include "../players/AbstractPlayer.h"
 #include "../players/AIplayer.h"
 #include "../players/Player.h"
+
 class PortalField : public Field {
+public:
+
+PortalField(int id, std::string group, int cost)
+		: Field(id, group, cost) {
+	};
+
+	PortalField() : Field() {};
+
+
+	virtual void action(std::unique_ptr<AbstractPlayer>& player);
+
 private:
 
-
-public:
-	friend Field;
-	PortalField(int t_id, int t_cost, int t_group)
-		: Field(t_id, t_cost, t_group) {
-		type = 5;
-	}
-	virtual void action(std::unique_ptr<AbstractPlayer>& player);
 };

@@ -1,21 +1,23 @@
 #pragma once
 
 #include "Field.h"
+
 #include "../players/AbstractPlayer.h"
 #include "../players/AIplayer.h"
 #include "../players/Player.h"
 
 class StartField : public Field {
-private:
-
 
 public:
-	friend Field;
-	StartField(int t_id, int t_cost, int t_group)
-		: Field(t_id, t_cost, t_group) {
-		type = 6;
-	}
+
+  StartField(int id, std::string group, int cost)
+		: Field(id, group, cost) {
+	};
+
+	StartField() : Field() {};
+
 
 	virtual void action(std::unique_ptr<AbstractPlayer>& player);
 
+private:
 };

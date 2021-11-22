@@ -1,8 +1,8 @@
 #include "AbstractPlayer.h"
 
 AbstractPlayer::AbstractPlayer() {
-	namePlayer = "";
-	ID = 0;
+	name = "";
+	id = 0;
 	cash = 0;
 	bankrot = 0;
 	pos = 0;
@@ -10,8 +10,8 @@ AbstractPlayer::AbstractPlayer() {
 }
 
 AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
-	namePlayer = name;
-	ID = Playerid;
+	this->name = name;
+	this->id = Playerid;
 	cash = 0;
 	bankrot = 0;
 	pos = 0;
@@ -19,31 +19,58 @@ AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 }
 
 AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {
-	namePlayer = p.namePlayer;
-	ID = p.ID;
+	this->name = p.name;
+	this->id = p.id;
 	cash = p.cash;
 	bankrot = p.bankrot;
 	pos = p.pos;
 	skip = p.skip;
 }
 
-void AbstractPlayer::name(const std::string name) {
-	namePlayer = name;
+void AbstractPlayer::setName(const std::string name) {
+	this->name = name;
 }
 
-void AbstractPlayer::IDplayers(int id) {
-	ID = id;
+void AbstractPlayer::setID(int id) {
+	this->id = id;
 }
 
-void AbstractPlayer::Cash(int a) {
-	cash = a;
+void AbstractPlayer::setCash(int cash) {
+	this->cash = cash;
 }
 
-void AbstractPlayer::ifBankrot(bool a) {
-	bankrot = a;
+void AbstractPlayer::setBankrot(bool bankrot) {
+	this->bankrot = bankrot;
 }
 
-void AbstractPlayer::getPos(int p) {
-	pos = p;
+void AbstractPlayer::setPos(int pos) {
+	this->pos = pos;
 }
 
+void AbstractPlayer::setSkip(bool skip){
+  this->skip = skip;
+}
+
+std::string AbstractPlayer::getName() {
+	return name;
+}
+
+int AbstractPlayer::getID() {
+	return id;
+}
+
+int AbstractPlayer::getCash() {
+	return cash;
+}
+
+bool AbstractPlayer::getBankrot() {
+	return bankrot;
+}
+
+int AbstractPlayer::getPos() {
+	return pos;
+}
+
+bool AbstractPlayer::getSkip() {
+	return skip;
+}

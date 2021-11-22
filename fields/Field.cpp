@@ -1,48 +1,54 @@
 #include "Field.h"
 
 Field::Field() { 
-	ID = 0;
-	group = 0;
-	fieldCost = 0;
-	bought = false;
-	idPlayer = -1;
-	type = -1;
-	
+    this->id = -1;
+    this->group = "";
+    this->cost = 0;
+    this->bought = -1;
 }
 
-Field::Field(int t_id, int t_cost, int t_group) {
-	ID = t_id;
-	group = t_group;
-	fieldCost = t_cost;
-	bought = false;
-	idPlayer = -1;
-	type = -1;
+Field::Field(int id, std::string group, int cost) {
+	this->id = id;
+	this->group = group;
+	this->cost = cost;
+	this->bought = -1;
 }
 
 Field::Field(const Field& P) {
-	ID = P.ID;
-	group = P.group;
-	fieldCost = P.fieldCost;
-	bought = P.bought;
-	idPlayer = P.idPlayer;
-	type = -1;
+	this->id = P.id;
+	this->group = P.group;
+	this->cost = P.cost;
+	this->bought = P.bought;
 }
 
-void Field::getID(int id) {
-	ID = id;
-}
-void Field::getGroup(int g) {
-	group = g;
+void Field::setID(int id) {
+	this->id = id;
 }
 
-void Field::getFieldCost(int cost) {
-	fieldCost = cost;
+void Field::setGroup(std::string g) {
+	this->group = g;
 }
 
-void Field::getBought(bool b) {
-	bought = b;
+void Field::setCost(int cost) {
+	this->cost = cost;
 }
 
-void Field::getIDPlayer(int IDplayer) {
-	idPlayer = IDplayer;
+void Field::setBought(int b) {
+	this->bought = b;
+}
+
+int Field::getID() {
+	return id;
+}
+
+std::string Field::getGroup() {
+	return group;
+}
+
+int Field::getCost() {
+	return cost;
+}
+
+int Field::getBought() {
+	return bought;
 }
