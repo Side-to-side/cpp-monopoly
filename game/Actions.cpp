@@ -35,7 +35,7 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
         
         //Field::ptr tmp = map[fieldData.at("class")]();
         //tmp->deserialize(fieldData.at("properties"));
-        vec.push_back(std::move(tmp));
+        //vec.push_back(std::move(tmp));
     }
     return vec;
 }

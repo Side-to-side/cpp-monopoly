@@ -16,7 +16,7 @@ public:
 	VadimField() : Field() {};
 
 
-	virtual void action(std::unique_ptr<AbstractPlayer>& player);
+	void action(std::unique_ptr<AbstractPlayer>& player);
 
 private:
 

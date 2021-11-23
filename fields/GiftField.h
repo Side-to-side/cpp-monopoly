@@ -17,7 +17,7 @@ GiftField(int id, std::string group, int cost)
 	GiftField() : Field() {};
 
 
-	virtual void action(std::unique_ptr<AbstractPlayer>& player);
+	void action(std::unique_ptr<AbstractPlayer>& player);
 
 private:
 

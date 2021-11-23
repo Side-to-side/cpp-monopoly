@@ -14,13 +14,6 @@ Field::Field(int id, std::string group, int cost) {
 	this->bought = -1;
 }
 
-Field::Field(const Field& P) {
-	this->id = P.id;
-	this->group = P.group;
-	this->cost = P.cost;
-	this->bought = P.bought;
-}
-
 void Field::setID(int id) {
 	this->id = id;
 }

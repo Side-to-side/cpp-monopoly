@@ -19,7 +19,7 @@ public:
         bought = 0;
 	};
 
-	virtual void action(std::unique_ptr<AbstractPlayer>& player);
+	void action(std::unique_ptr<AbstractPlayer>& player);
 
 private:
 

@@ -18,7 +18,7 @@ PortalField(int id, std::string group, int cost)
 	PortalField() : Field() {};
 
 
-	virtual void action(std::unique_ptr<AbstractPlayer>& player);
+	void action(std::unique_ptr<AbstractPlayer>& player);
 
 private:
 
