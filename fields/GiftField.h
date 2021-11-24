@@ -18,7 +18,8 @@ GiftField(int id, std::string group, int cost)
 
 
 	void action(std::unique_ptr<AbstractPlayer>& player);
-
+  void deserialize(const json& data);
+  
 private:
 
 };

@@ -18,9 +18,12 @@ public:
 	BasicField() : Field() {
         bought = 0;
 	};
-
+  void coutID(){
+    std::cout << id;
+  }
 	void action(std::unique_ptr<AbstractPlayer>& player);
-
+  void deserialize(const json& data);
+  
 private:
 
 };

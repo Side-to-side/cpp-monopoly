@@ -3,6 +3,8 @@
 
 #include "../players/AbstractPlayer.h"
 
+#include "../lib/json.hpp"
+
 class Field {
 public:	
 	Field();
@@ -19,6 +21,7 @@ public:
 	int getBought();
 
   virtual void action(std::unique_ptr<AbstractPlayer>& player) = 0;
+  virtual void deserialize(const json& data) = 0;
 
 protected:
   int id;
