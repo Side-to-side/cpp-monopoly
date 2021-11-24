@@ -21,6 +21,11 @@ public:
   void coutID(){
     std::cout << id;
   }
+
+  void info(){
+    std::cout << "it's BasicField\n";
+  }
+
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
   

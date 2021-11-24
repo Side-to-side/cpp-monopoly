@@ -15,7 +15,9 @@ public:
 
 	QuestionField() : Field() {};
 
-
+  void info(){
+    std::cout << "it's QuestionField\n";
+  }
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
   

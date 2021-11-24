@@ -16,7 +16,9 @@ public:
 
 	StartField() : Field() {};
 
-
+  void info(){
+    std::cout << "it's StartField\n";
+  }
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
   

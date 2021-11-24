@@ -3,6 +3,8 @@
 
 #include "Dice.h"
 
+#include "Actions.h"
+
 #include "../players/AbstractPlayer.h"
 #include "../players/AIplayer.h"
 #include "../players/Player.h"

@@ -15,7 +15,9 @@ public:
 
 	VadimField() : Field() {};
 
-
+  void info(){
+    std::cout << "it's VadimField\n";
+  }
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
 

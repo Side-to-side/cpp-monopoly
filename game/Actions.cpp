@@ -27,15 +27,8 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
 
     for (const json& fieldData : data) {
        std::unique_ptr<Field> tmp = map[fieldData.at("class")]();
-        
+        tmp->deserialize(fieldData.at("properties"));
         vec.push_back(std::move(tmp));
-        //std::cout << a << " ";  
-        std::cout << fieldData.at("class") << std::endl;
-       // std::cout << fieldData.at("properties").at("cost") << std::endl;
-        
-        //Field::ptr tmp = map[fieldData.at("class")]();
-        //tmp->deserialize(fieldData.at("properties"));
-        //vec.push_back(std::move(tmp));
     }
     return vec;
 }

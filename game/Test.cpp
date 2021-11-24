@@ -2,7 +2,7 @@
 
 void Test::tests() {
 	test1();
-	//test2();
+	test2();
 	test3();
   test4();
 }
@@ -19,11 +19,13 @@ void Test::test1() {
 
 void Test::test2() {
 	std::cout << "Test 2:\n";
-	std::cout << "check class constructor Field, ";
-	std::cout << "the output should be\nid: 3\ncost: 4000\n\noutput\n";
-	//Field f(3, "", 4000);
-	//std::cout << "id: " << f.getID() << std::endl;
-	//std::cout << "cost: " << f.getCost() << std::endl;
+	std::cout << "checking the loading of the playing field\n\n";
+	std::vector<std::unique_ptr<Field>> test_map;
+  test_map = fieldCreation();
+  for(int i = 0;i < test_map.size();i++){
+    test_map[i]->info();
+    std::cout << test_map[i]->getID() << " " << std::endl;
+  }
 	std::cout << "--------------------------------\n";
 }
 

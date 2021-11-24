@@ -17,7 +17,9 @@ PortalField(int id, std::string group, int cost)
 
 	PortalField() : Field() {};
 
-
+  void info(){
+    std::cout << "it's PortalField\n";
+  }
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
   

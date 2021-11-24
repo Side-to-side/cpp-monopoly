@@ -20,6 +20,7 @@ public:
 	int getCost();
 	int getBought();
 
+  virtual void info() = 0;
   virtual void action(std::unique_ptr<AbstractPlayer>& player) = 0;
   virtual void deserialize(const json& data) = 0;
 
