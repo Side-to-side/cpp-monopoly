@@ -2,14 +2,25 @@
 
 #include "Field.h"
 
-class StartField : public Field {
-private:
+#include "../players/AbstractPlayer.h"
+#include "../players/AIplayer.h"
+#include "../players/Player.h"
 
+class StartField : public Field {
 
 public:
-	friend Field;
-	StartField(int t_id, int t_cost, int t_group)
-		: Field(t_id, t_cost, t_group) {
-		type = 6;
-	}
+
+  StartField(int id, std::string group, int cost)
+		: Field(id, group, cost) {
+	};
+
+	StartField() : Field() {};
+
+  void info(){
+    std::cout << "it's StartField\n";
+  }
+	void action(std::unique_ptr<AbstractPlayer>& player);
+  void deserialize(const json& data);
+  
+private:
 };

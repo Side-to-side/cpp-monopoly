@@ -1,25 +1,35 @@
 #pragma once
 #include <string>
 
+#include "../players/AbstractPlayer.h"
+
+#include "../lib/json.hpp"
+
 class Field {
-public:
-	int ID;				// id поля
-	int group;			// к какой группе карточек принадлежит 
-	int type;           // к какому типу принадлежит поле 
-	int fieldCost;		// цена поля 
-	bool bought;		// куплено/не куплено 
-	int idPlayer;		// номер игрока какому принадлежит поле 
-	
+public:	
 	Field();
-	Field(int id, int cost, int t_group);
-	Field(const Field& P);
+	Field(int id, std::string group, int cost);
 
-	void getID(int id);
-	void getGroup(int g);
-	void getFieldCost(int cost);
-	void getBought(bool b);
-	void getIDPlayer(int IDplayer);
+	void setID(int id);
+	void setGroup(std::string g);
+	void setCost(int cost);
+	void setBought(int b);
 
+	int getID();
+	std::string getGroup();
+	int getCost();
+	int getBought();
+
+  virtual void info() = 0;
+  virtual void action(std::unique_ptr<AbstractPlayer>& player) = 0;
+  virtual void deserialize(const json& data) = 0;
+
+protected:
+  int id;
+	std::string group;
+	int cost;
+	int bought;
+  
 private:
 
 };

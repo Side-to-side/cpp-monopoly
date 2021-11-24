@@ -1,15 +1,26 @@
 #pragma once
 
 #include "Field.h"
+#include "../players/AbstractPlayer.h"
+#include "../players/AIplayer.h"
+#include "../players/Player.h"
 
 class VadimField : public Field {
+  
+public:
+
+  VadimField(int id, std::string group, int cost)
+		: Field(id, group, cost) {
+	};
+
+	VadimField() : Field() {};
+
+  void info(){
+    std::cout << "it's VadimField\n";
+  }
+	void action(std::unique_ptr<AbstractPlayer>& player);
+  void deserialize(const json& data);
+
 private:
 
-
-public:
-	friend Field;
-	VadimField(int t_id, int t_cost, int t_group)
-		: Field(t_id, t_cost, t_group) {
-		type = 8;
-	}
 };

@@ -14,10 +14,12 @@
 #include "../fields/Field.h"
 
 class Monopoly {
+  
 public:
 	void menu();
-	void startGame();	// function with initial data
+	void startGame();   // function with initial data
 	void updateGame();	// the game
+
 private:
 	int numberPlayers = 0;
 	int numberBots = 0;
