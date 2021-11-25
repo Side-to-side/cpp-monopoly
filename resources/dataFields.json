@@ -1,0 +1,319 @@
+[
+  {
+    "class": "StartField",
+    "properties": {
+      "id": 0
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 1,
+      "group": "humanitarian",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 2,
+      "group": "humanitarian",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 3,
+      "group": "humanitarian",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "QuestionField",
+    "properties": {
+      "id": 4
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 5,
+      "group": "PE",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 6,
+      "group": "PE",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 7,
+      "group": "PE",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "PortalField",
+    "properties": {
+      "id": 8
+    }
+  },
+  {
+    "class": "PolyanaField",
+    "properties": {
+      "id": 9
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 10,
+      "group": "DiscreteMath",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 11,
+      "group": "DiscreteMath",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 12,
+      "group": "DiscreteMath",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "QuestionField",
+    "properties": {
+      "id": 13
+    }
+  },
+  {
+    "class": "SelectiveField",
+    "properties": {
+      "id": 14,
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 15,
+      "group": "NumericalMethods",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 16,
+      "group": "NumericalMethods",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 17,
+      "group": "NumericalMethods",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "VadimField",
+    "properties": {
+      "id": 18
+    }
+  },
+  {
+    "class": "SelectiveField",
+    "properties": {
+      "id": 19,
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 20,
+      "group": "Physics",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 21,
+      "group": "Physics",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 22,
+      "group": "Physics",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 23,
+      "group": "Physics",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "PortalField",
+    "properties": {
+      "id": 24
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 25,
+      "group": "Programming",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 27,
+      "group": "Programming",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 28,
+      "group": "Programming",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "QuestionField",
+    "properties": {
+      "id": 29
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 30,
+      "group": "DSA",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 31,
+      "group": "DSA",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 32,
+      "group": "DSA",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 33,
+      "group": "MathematicalAnalysis",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 34,
+      "group": "MathematicalAnalysis",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 35,
+      "group": "MathematicalAnalysis",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "PortalField",
+    "properties": {
+      "id": 36
+    }
+  },
+  {
+    "class": "SelectiveField",
+    "properties": {
+      "id": 37,
+      "cost": 1000
+    }
+  },
+  {
+    "class": "GiftField",
+    "properties": {
+      "id": 38
+    }
+  },
+  {
+    "class": "QuestionField",
+    "properties": {
+      "id": 39
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 40,
+      "group": "Circuitry",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 41,
+      "group": "Circuitry",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 42,
+      "group": "Circuitry",
+      "cost": 1000
+    }
+  },
+  {
+    "class": "PortalField",
+    "properties": {
+      "id": 43
+    }
+  }
+]

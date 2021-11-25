@@ -1,5 +1,5 @@
-#include "Test.h"
-#include "Monopoly.h"
+#include "game/Test.h"
+#include "game/Monopoly.h"
 
 int main(){
     

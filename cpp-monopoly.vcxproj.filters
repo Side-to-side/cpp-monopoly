@@ -1,152 +1,137 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Файлы заголовков">
+    <Filter Include="fields">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов">
+    <Filter Include="game">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="players">
+      <UniqueIdentifier>{57290a61-13eb-4817-870d-ce49ed930c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{b3f70cdb-bdfa-45fc-8b53-a3a13ac39679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>main</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\BasicField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="AbstractPlayer.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\Field.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="Actions.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\GiftField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="AIplayer.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\PolyanaField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="Test.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\PortalField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="Field.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\QuestionField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="Monopoly.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\SelectiveField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="BasicField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\StartField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="SelectiveField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="fields\VadimField.cpp">
+      <Filter>fields</Filter>
     </ClCompile>
-    <ClCompile Include="QuestionField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="game\Actions.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="GiftField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="game\Dice.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="PortalField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="game\Monopoly.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="StartField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="game\Statistik.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="PolyanaField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="game\Test.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="VadimField.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="players\AbstractPlayer.cpp">
+      <Filter>players</Filter>
     </ClCompile>
-    <ClCompile Include="Statistik.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="players\AIplayer.cpp">
+      <Filter>players</Filter>
     </ClCompile>
-    <ClCompile Include="Dice.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="players\Player.cpp">
+      <Filter>players</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\BasicField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractPlayer.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\Field.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="Actions.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\GiftField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="AIplayer.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\PolyanaField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="Field.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\PortalField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\QuestionField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="Monopoly.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\SelectiveField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="BasicField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\StartField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="SelectiveField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="fields\VadimField.h">
+      <Filter>fields</Filter>
     </ClInclude>
-    <ClInclude Include="QuestionField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="game\Actions.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="GiftField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="game\Dice.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="PortalField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="game\Monopoly.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="StartField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="game\Statistik.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="PolyanaField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="game\Test.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="VadimField.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="players\AbstractPlayer.h">
+      <Filter>players</Filter>
     </ClInclude>
-    <ClInclude Include="Statistik.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="players\AIplayer.h">
+      <Filter>players</Filter>
     </ClInclude>
-    <ClInclude Include="Dice.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="players\Player.h">
+      <Filter>players</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="BasicField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="StartField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="VadimField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="QuestionField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="PortalField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="SelectiveField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="PolyanaField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="GiftField.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
+    <None Include="resources\dataFields.json">
+      <Filter>resources</Filter>
+    </None>
   </ItemGroup>
 </Project>
