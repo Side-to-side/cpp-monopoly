@@ -5,15 +5,14 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
+#include "../players/Bot.h"
 #include "../players/Player.h"
 
 class PortalField : public Field {
 public:
 
-PortalField(int id, std::string group, int cost)
-		: Field(id, group, cost) {
-	};
+	PortalField(int id)
+		: Field(id) {};
 
 	PortalField() : Field() {};
 

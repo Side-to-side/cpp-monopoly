@@ -3,16 +3,15 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
+#include "../players/Bot.h"
 #include "../players/Player.h"
 
 class StartField : public Field {
 
 public:
 
-  StartField(int id, std::string group, int cost)
-		: Field(id, group, cost) {
-	};
+	StartField(int id)
+		: Field(id) {};
 
 	StartField() : Field() {};
 

@@ -2,7 +2,7 @@
 #include <string>
 #include <memory>
 
-//#include "../fields/Field.h"
+#include "../game/Dice.h"
 
 class AbstractPlayer {
 public:
@@ -24,9 +24,8 @@ public:
 	int getPos();
 	bool getSkip();
 
-	//virtual void buyField(std::unique_ptr<Field>& field) = 0;
-	//virtual void trade(std::unique_ptr<AbstractPlayer>& player1, std::unique_ptr<AbstractPlayer>& player2) = 0;
-
+  virtual void makeTurn() = 0;
+  
 protected:
 	std::string name;
 	int id;

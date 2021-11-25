@@ -5,7 +5,7 @@
 #include <string>
 
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
+#include "../players/Bot.h"
 #include "../players/Player.h"
 
 #include "../game/Actions.h"

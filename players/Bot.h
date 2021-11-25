@@ -4,16 +4,16 @@
 
 #include "AbstractPlayer.h"
 
-class Player : public AbstractPlayer {
+class Bot : public AbstractPlayer {
 public:
-	Player(const std::string& Name, int Playerid)
+	Bot(const std::string& Name, int Playerid)
 		: AbstractPlayer(Name, Playerid) {};
-    
-    Player() : AbstractPlayer() {};
 
-  void makeTurn();
+  Bot() : AbstractPlayer() {};
+
+  void makeTurn(); 
   void move();
+  
 private:
+	
 };
-
-

@@ -4,17 +4,17 @@
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
+#include "../players/Bot.h"
 #include "../players/Player.h"
 
 class GiftField : public Field {
 public:
 
-GiftField(int id, std::string group, int cost)
-		: Field(id, group, cost) {
-	};
+	GiftField(int id)
+		: Field(id) {};
 
 	GiftField() : Field() {};
+
 
   void info(){
     std::cout << "it's GiftField\n";

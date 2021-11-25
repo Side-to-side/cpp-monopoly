@@ -1,17 +1,17 @@
 #pragma once
 
 #include "Field.h"
+
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
+#include "../players/Bot.h"
 #include "../players/Player.h"
 
 class VadimField : public Field {
   
 public:
 
-  VadimField(int id, std::string group, int cost)
-		: Field(id, group, cost) {
-	};
+	VadimField(int id)
+		: Field(id) {};
 
 	VadimField() : Field() {};
 

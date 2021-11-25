@@ -11,7 +11,7 @@ void Test::test1() {
 	std::cout << "Test 1:\n";
 	std::cout << "check class constructor AI, ";
 	std::cout << "the output should be\nname: Andrey\nid: 0\n\noutput\n";
-	AI a("Andrey",0);
+	Bot a("Andrey",0);
 	std::cout << "name: " << a.getName() << std::endl;
 	std::cout << "id: " << a.getID() << std::endl;
 	std::cout << "--------------------------------\n";
@@ -43,9 +43,9 @@ void Test::test3() {
 
 void Test::test4() {
 	std::cout << "Test 4:\n";
-	std::cout << "check class constructor StartField, ";
-	std::cout << "the output should be\nid: 3\ncost: 4000\n\noutput\n";
-	StartField f(3, "", 4000);
+	std::cout << "check class constructor BasicField, ";
+	std::cout << "the output should be\nid: 3\ncost: 0\n\noutput\n";
+	BasicField f(3);
 	std::cout << "id: " << f.getID() << std::endl;
 	std::cout << "cost: " << f.getCost() << std::endl;
 	std::cout << "--------------------------------\n";

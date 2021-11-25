@@ -6,11 +6,9 @@
 #include "Actions.h"
 
 #include "../players/AbstractPlayer.h"
-#include "../players/AIplayer.h"
-#include "../players/Player.h"
 
 #include "../fields/Field.h"
-#include "../fields/StartField.h"
+#include "../fields/BasicField.h"
 
 class Test {
 public:

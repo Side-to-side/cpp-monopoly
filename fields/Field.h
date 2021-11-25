@@ -8,16 +8,12 @@
 class Field {
 public:	
 	Field();
-	Field(int id, std::string group, int cost);
+	Field(int id);
 
 	void setID(int id);
-	void setGroup(std::string g);
-	void setCost(int cost);
 	void setBought(int b);
 
 	int getID();
-	std::string getGroup();
-	int getCost();
 	int getBought();
 
   virtual void info() = 0;
@@ -26,10 +22,8 @@ public:
 
 protected:
   int id;
-	std::string group;
-	int cost;
 	int bought;
-  
+
 private:
 
 };

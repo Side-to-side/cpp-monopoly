@@ -1,5 +1,13 @@
 #include "SelectiveField.h"
 
+void SelectiveField::setCost(int cost) {
+	this->cost = cost;
+}
+
+int SelectiveField::getCost(){
+  return cost;
+}
+
 void SelectiveField::action(std::unique_ptr<AbstractPlayer>& player) {
 
 }
