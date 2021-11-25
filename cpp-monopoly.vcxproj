@@ -155,10 +155,11 @@
     <ClCompile Include="game\Test.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="players\AbstractPlayer.cpp" />
-    <ClCompile Include="players\AIplayer.cpp" />
+    <ClCompile Include="players\Bot.cpp" />
     <ClCompile Include="players\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="factory\FactoryMethod.h" />
     <ClInclude Include="fields\BasicField.h" />
     <ClInclude Include="fields\Field.h" />
     <ClInclude Include="fields\GiftField.h" />
@@ -173,8 +174,9 @@
     <ClInclude Include="game\Monopoly.h" />
     <ClInclude Include="game\Statistik.h" />
     <ClInclude Include="game\Test.h" />
+    <ClInclude Include="lib\json.hpp" />
     <ClInclude Include="players\AbstractPlayer.h" />
-    <ClInclude Include="players\AIplayer.h" />
+    <ClInclude Include="players\Bot.h" />
     <ClInclude Include="players\Player.h" />
   </ItemGroup>
   <ItemGroup>

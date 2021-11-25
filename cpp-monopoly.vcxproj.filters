@@ -19,6 +19,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="factory">
+      <UniqueIdentifier>{30e49f24-3dab-41a5-b0cf-7f4fc1c295bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{c74cd706-7681-47c1-b3d6-cbec2043ccfa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,10 +75,10 @@
     <ClCompile Include="players\AbstractPlayer.cpp">
       <Filter>players</Filter>
     </ClCompile>
-    <ClCompile Include="players\AIplayer.cpp">
+    <ClCompile Include="players\Player.cpp">
       <Filter>players</Filter>
     </ClCompile>
-    <ClCompile Include="players\Player.cpp">
+    <ClCompile Include="players\Bot.cpp">
       <Filter>players</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,11 +128,17 @@
     <ClInclude Include="players\AbstractPlayer.h">
       <Filter>players</Filter>
     </ClInclude>
-    <ClInclude Include="players\AIplayer.h">
-      <Filter>players</Filter>
-    </ClInclude>
     <ClInclude Include="players\Player.h">
       <Filter>players</Filter>
+    </ClInclude>
+    <ClInclude Include="players\Bot.h">
+      <Filter>players</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\FactoryMethod.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\json.hpp">
+      <Filter>lib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
