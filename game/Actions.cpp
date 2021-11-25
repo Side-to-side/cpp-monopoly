@@ -8,16 +8,16 @@ std::unique_ptr<Field> createInstance() {
 
 std::vector<std::unique_ptr<Field>> fieldCreation() {
 
-    std::unordered_map<std::string, std::unique_ptr<Field> (*)() >  map = {
-      {"StartField", &createInstance<StartField>},
-      {"BasicField", &createInstance<BasicField>},
-      {"QuestionField", &createInstance<QuestionField>},
-      {"PortalField", &createInstance<PortalField>},
-      {"PolyanaField", &createInstance<PolyanaField>},
-      {"SelectiveField", &createInstance<SelectiveField>},
-      {"VadimField", &createInstance<VadimField>},
-      {"GiftField", &createInstance<GiftField>}
-  };
+    std::unordered_map<std::string, std::unique_ptr<Field>(*)() >  map{
+      std::make_pair("StartField", &createInstance<StartField>),
+      std::make_pair("BasicField", &createInstance<BasicField>),
+      std::make_pair("QuestionField", &createInstance<QuestionField>),
+      std::make_pair("PortalField", &createInstance<PortalField>),
+      std::make_pair("PolyanaField", &createInstance<PolyanaField>),
+      std::make_pair("SelectiveField", &createInstance<SelectiveField>),
+      std::make_pair("VadimField", &createInstance<VadimField>),
+      std::make_pair("GiftField", &createInstance<GiftField>)
+    };
 
     std::vector<std::unique_ptr<Field>> vec;
 
