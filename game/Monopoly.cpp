@@ -12,7 +12,7 @@ void Monopoly::menu() {
 }
 
 void Monopoly::startGame() {
-	int id = 0;
+	int id = 1;
 	for (int i = 0; i < numberPlayers; i++) {
 		Player a("Human", id);
 		players.push_back(std::make_unique<Player>(a));
@@ -33,10 +33,9 @@ void Monopoly::updateGame() {
 	std::cout << "There are " << players.size() << " participants in the game\n";
 
   int number_players = players.size();
-  int id_player = 0;
+  int id_player = 1;
 
   while(number_players > 1){
-  std::cout << "ok";
     if(players[id_player]->getBankrot() == true){
       id_player++;
       id_player %= players.size();

@@ -13,5 +13,6 @@ void Bot::makeTurn(){
   pos += Dice1.getValue() + Dice2.getValue();
   pos %= 44;
   
-  std::cout << name << " moved to field " << pos;
+  std::cout << name << " moved to field " << pos << "\n";
+   std::cout << "---------------------------\n";
 }

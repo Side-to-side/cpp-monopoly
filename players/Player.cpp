@@ -1,7 +1,7 @@
 #include "Player.h"
 
 void Player::makeTurn(){
-  std::cout << "player number " << id << "chooses:\n"
+  std::cout << "\nplayer number " << id << "chooses:\n"
             << "1. trade \n2. add / remove an asterisk from the field \n3. throw the dice\n\n";
 
   std::cout << "input: ";
@@ -17,7 +17,7 @@ void Player::makeTurn(){
 		//add_or_remove();
 		break;
 	case 3:
-		//move();
+		move();
 		break;
 	default:
 		std::cout << "Unknown (skip)...\n\n";
@@ -38,5 +38,6 @@ void Player::move(){
   pos += Dice1.getValue() + Dice2.getValue();
   pos %= 44;
   
-  std::cout << name << " moved to field " << pos;
+  std::cout << name << " moved to field " << pos << "\n";
+  std::cout << "---------------------------\n";
 }
