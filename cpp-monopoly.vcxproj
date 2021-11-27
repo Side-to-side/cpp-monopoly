@@ -157,6 +157,7 @@
     <ClCompile Include="players\AbstractPlayer.cpp" />
     <ClCompile Include="players\Bot.cpp" />
     <ClCompile Include="players\Player.cpp" />
+    <ClCompile Include="MonopolyManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="factory\FactoryMethod.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="game\Monopoly.h" />
     <ClInclude Include="game\Statistik.h" />
     <ClInclude Include="game\Test.h" />
+    <ClInclude Include="MonopolyManager.h" />
     <ClInclude Include="lib\json.hpp" />
     <ClInclude Include="players\AbstractPlayer.h" />
     <ClInclude Include="players\Bot.h" />

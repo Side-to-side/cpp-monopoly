@@ -13,6 +13,8 @@ public:
 
   void makeTurn();
   void move();
+  void trade(std::unique_ptr<AbstractPlayer>& playerToTrade);
+  void add_or_remove();
 private:
 };
 

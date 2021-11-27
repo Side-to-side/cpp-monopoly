@@ -1,7 +1,7 @@
 #include "Player.h"
 
 void Player::makeTurn(){
-  std::cout << "\nplayer number " << id << "chooses:\n"
+  std::cout << "\nplayer number " << id << " chooses:\n"
             << "1. trade \n2. add / remove an asterisk from the field \n3. throw the dice\n\n";
 
   std::cout << "input: ";
@@ -11,10 +11,10 @@ void Player::makeTurn(){
 
 	switch (opt) {
 	case 1:
-		//trade();
+		//trade(); 
 		break;
 	case 2:
-		//add_or_remove();
+	    //add_or_remove();
 		break;
 	case 3:
 		move();
@@ -40,4 +40,12 @@ void Player::move(){
   
   std::cout << name << " moved to field " << pos << "\n";
   std::cout << "---------------------------\n";
+}
+
+void Player::trade(std::unique_ptr<AbstractPlayer>& playerToTrade) {
+	// треба доступ до поля, як чекнуть де чиє поле
+}
+
+void Player::add_or_remove() {
+	// поки гребу, треба з полями це узгодить
 }

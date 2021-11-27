@@ -30,15 +30,7 @@ void Test::test2() {
 }
 
 void Test::test3() {
-	std::cout << "Test 3: \n";
-	std::cout << "check the Dice \n\n";
-	std::cout << "Value from 1 to 6 \n";
-	Dice first, second;
-	first.randValue();
-	second.randValue();
-	std::cout << first.getValue() << "\n\n";
-	std::cout << second.getValue() << "\n\n";
-	std::cout << "--------------------------------\n";
+	MonopolyManager
 }
 
 void Test::test4() {

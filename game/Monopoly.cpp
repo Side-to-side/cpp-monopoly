@@ -40,9 +40,8 @@ void Monopoly::updateGame() {
       id_player++;
       id_player %= players.size();
       continue;
-    }
+	}
 	  players[id_player]->makeTurn();
-
+	  map[players[id_player]->getPos()]->action(players[id_player]);
   }
-
 }

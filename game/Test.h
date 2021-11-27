@@ -10,6 +10,8 @@
 #include "../fields/Field.h"
 #include "../fields/BasicField.h"
 
+#include "MonopolyManager.h";
+
 class Test {
 public:
 	void tests();
