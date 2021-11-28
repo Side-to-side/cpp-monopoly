@@ -1,9 +1,8 @@
 #pragma once
 #include <iostream>
 
-#include "Dice.h"
-
 #include "Actions.h"
+#include "Dice.h"
 
 #include "../players/AbstractPlayer.h"
 

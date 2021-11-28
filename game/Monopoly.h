@@ -28,5 +28,5 @@ private:
 	Dice Dice2;
 
 	std::vector<std::unique_ptr<AbstractPlayer>> players;
-	std::vector<std::unique_ptr<Field>> map;
+	std::vector<std::unique_ptr<Field>> mapMonopoly;
 };

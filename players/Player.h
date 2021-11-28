@@ -7,12 +7,15 @@
 class Player : public AbstractPlayer {
 public:
 	Player(const std::string& Name, int Playerid)
-		: AbstractPlayer(Name, Playerid) {};
+		: AbstractPlayer(Name, Playerid) {
+            bankrot = false;
+    };
     
     Player() : AbstractPlayer() {};
 
-  void makeTurn();
-  void move();
+  int makeTurn();
+  int move();
+  
 private:
 };
 

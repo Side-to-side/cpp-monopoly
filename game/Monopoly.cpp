@@ -24,7 +24,7 @@ void Monopoly::startGame() {
 		id++;
 	}
 
-	map = fieldCreation();
+	mapMonopoly = fieldCreation();
 }
 
 void Monopoly::updateGame() {
@@ -33,16 +33,15 @@ void Monopoly::updateGame() {
 	std::cout << "There are " << players.size() << " participants in the game\n";
 
   int number_players = players.size();
-  int id_player = 1;
+  int id_player = 0;
 
   while(number_players > 1){
     if(players[id_player]->getBankrot() == true){
-      id_player++;
-      id_player %= players.size();
-      continue;
+       continue;
     }
 	  players[id_player]->makeTurn();
-
+    id_player++;
+    id_player %= players.size();
   }
 
 }

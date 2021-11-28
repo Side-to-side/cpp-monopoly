@@ -1,7 +1,7 @@
 #include "Player.h"
 
-void Player::makeTurn(){
-  std::cout << "\nplayer number " << id << "chooses:\n"
+int Player::makeTurn(){
+  std::cout << "\nplayer number " << id << " chooses:\n"
             << "1. trade \n2. add / remove an asterisk from the field \n3. throw the dice\n\n";
 
   std::cout << "input: ";
@@ -12,20 +12,23 @@ void Player::makeTurn(){
 	switch (opt) {
 	case 1:
 		//trade();
+    makeTurn();
 		break;
 	case 2:
-		//add_or_remove();
+		//add_or_remove(players[(this->id)-1]);
+    makeTurn();
 		break;
 	case 3:
-		move();
+		return move();
 		break;
 	default:
 		std::cout << "Unknown (skip)...\n\n";
+    return -1;
 		break;
 	}
 }
 
-void Player::move(){
+int Player::move(){
   std::cout << name << " made the decision to roll the dice\n\n";
 
   Dice Dice1, Dice2;
@@ -40,4 +43,12 @@ void Player::move(){
   
   std::cout << name << " moved to field " << pos << "\n";
   std::cout << "---------------------------\n";
+  return pos;
 }
+
+/*trade(std::unique_ptr<AbstractPlayer>& player){
+  std::cout << " will be implemented through the graphical shell\n\n";
+}
+add_or_remove(std::unique_ptr<AbstractPlayer>& player){
+  std::cout << player->name() << "\n\n";
+}*/

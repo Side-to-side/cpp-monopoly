@@ -1,22 +1,18 @@
 #include "Actions.h"
 
-template <class FieldDerived>
-
-std::unique_ptr<Field> createInstance() {
-  return std::make_unique<FieldDerived>();
-}
+#include "../factory/FactoryMethod.h"
 
 std::vector<std::unique_ptr<Field>> fieldCreation() {
-
-    std::unordered_map<std::string, std::unique_ptr<Field>(*)() >  map{
-      std::make_pair("StartField", &createInstance<StartField>),
-      std::make_pair("BasicField", &createInstance<BasicField>),
-      std::make_pair("QuestionField", &createInstance<QuestionField>),
-      std::make_pair("PortalField", &createInstance<PortalField>),
-      std::make_pair("PolyanaField", &createInstance<PolyanaField>),
-      std::make_pair("SelectiveField", &createInstance<SelectiveField>),
-      std::make_pair("VadimField", &createInstance<VadimField>),
-      std::make_pair("GiftField", &createInstance<GiftField>)
+ 
+    std::unordered_map<std::string, std::shared_ptr<FieldFactory> > map {
+        make_pair("BasicField", std::make_shared<BasicFieldFactory>()),
+        make_pair("GiftField", std::make_shared<GiftFieldFactory>()),
+        make_pair("PolyanaField", std::make_shared<PolyanaFieldFactory>()),
+        make_pair("PortalField", std::make_shared<PortalFieldFactory>()),
+        make_pair("QuestionField", std::make_shared<QuestionFieldFactory>()),
+        make_pair("SelectiveField", std::make_shared<SelectiveFieldFactory>()),
+        make_pair("StartField", std::make_shared<StartFieldFactory>()),
+        make_pair("VadimField", std::make_shared<VadimFieldFactory>())
     };
 
     std::vector<std::unique_ptr<Field>> vec;
@@ -25,8 +21,8 @@ std::vector<std::unique_ptr<Field>> fieldCreation() {
     json data = json::parse(fin);
     fin.close();
 
-    for (const json& fieldData : data) {
-       std::unique_ptr<Field> tmp = map[fieldData.at("class")]();
+    for (json& fieldData : data) {
+       std::unique_ptr<Field> tmp = map[fieldData.at("class")]->createField();
         tmp->deserialize(fieldData.at("properties"));
         vec.push_back(std::move(tmp));
     }

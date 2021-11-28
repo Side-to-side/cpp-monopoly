@@ -4,15 +4,19 @@
 
 #include "AbstractPlayer.h"
 
+#include "../game/Monopoly.h"
+
 class Bot : public AbstractPlayer {
 public:
 	Bot(const std::string& Name, int Playerid)
-		: AbstractPlayer(Name, Playerid) {};
+		: AbstractPlayer(Name, Playerid) {
+      bankrot = false;
+    };
 
   Bot() : AbstractPlayer() {};
 
-  void makeTurn(); 
-  void move();
+  int makeTurn(); 
+  int move();
   
 private:
 	

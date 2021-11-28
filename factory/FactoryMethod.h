@@ -8,64 +8,63 @@
 #include "../fields/StartField.h"
 #include "../fields/VadimField.h"
 
-class FieldFactory{
+class FieldFactory {
 public:
-  virtual Field* createPlayer() = 0;
-  virtual ~Factory() {};
-}
+    virtual std::unique_ptr<Field> createField() const = 0;
+};
 
-class BasicFieldFactory : FieldFactory{
+class BasicFieldFactory : public FieldFactory {
 public:
-    Field* createPlayer() { 
-      return new BasicField; 
+    std::unique_ptr<Field> createField() const {
+        return std::make_unique<BasicField>();
     }
-}
+};
 
-class GiftFieldFactory : FieldFactory{
+class GiftFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new GiftField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<GiftField>(); 
     }
-}
+};
 
-class PolyanaFieldFactory : FieldFactory{
+class PolyanaFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new PolyanaField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<PolyanaField>(); 
     }
-}
+};
 
-class PortalFieldFactory : FieldFactory{
+class PortalFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new PortalField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<PortalField>(); 
     }
-}
+};
 
-class QuestionFieldFactory : FieldFactory{
+class QuestionFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new QuestionField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<QuestionField>(); 
     }
-}
+};
 
-class SelectiveFieldFactory : FieldFactory{
+class SelectiveFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new SelectiveField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<SelectiveField>(); 
     }
-}
+};
 
-class StartFieldFactory : FieldFactory{
+class StartFieldFactory : public FieldFactory {
 public:
-    Field* createPlayer() { 
-      return new StartField; 
+    std::unique_ptr<Field> createField() const {
+        return std::make_unique<StartField>();
     }
-}
+};
 
-class VadimFieldFactory : FieldFactory{
+class VadimFieldFactory : public FieldFactory{
 public:
-    Field* createPlayer() { 
-      return new VadimField; 
+    std::unique_ptr<Field> createField() const { 
+        return std::make_unique<VadimField>(); 
     }
-}
+};

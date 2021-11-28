@@ -4,8 +4,6 @@
 #include <memory>
 #include <unordered_map>
 
-#include "../players/AbstractPlayer.h"
-
 #include "../fields/Field.h"
 #include "../fields/BasicField.h"
 #include "../fields/StartField.h"
@@ -15,6 +13,7 @@
 #include "../fields/PolyanaField.h"
 #include "../fields/GiftField.h"
 #include "../fields/SelectiveField.h"
+
 
 #include "../lib/json.hpp"
 

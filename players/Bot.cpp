@@ -1,6 +1,7 @@
 #include "Bot.h"
 
-void Bot::makeTurn(){
+int Bot::makeTurn(){
+  std::cout << "\nplayer number " << id << " chooses:\n";
   std::cout << name << " made the decision to roll the dice\n\n";
 
   Dice Dice1, Dice2;
@@ -14,5 +15,5 @@ void Bot::makeTurn(){
   pos %= 44;
   
   std::cout << name << " moved to field " << pos << "\n";
-   std::cout << "---------------------------\n";
+  std::cout << "---------------------------\n";
 }

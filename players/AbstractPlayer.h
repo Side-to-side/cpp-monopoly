@@ -24,7 +24,7 @@ public:
 	int getPos();
 	bool getSkip();
 
-  virtual void makeTurn() = 0;
+  virtual int makeTurn() = 0;
   
 protected:
 	std::string name;
