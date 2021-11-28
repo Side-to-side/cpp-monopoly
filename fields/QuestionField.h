@@ -1,5 +1,7 @@
 #pragma once
 
+#include <random>
+
 #include "Field.h"
 
 #include "../players/AbstractPlayer.h"
@@ -14,11 +16,15 @@ public:
 
 	QuestionField() : Field() {};
 
-  void info(){
-    std::cout << "it's QuestionField\n";
-  }
+	void info();
+	void incident1(std::unique_ptr<AbstractPlayer>& player);
+	void incident2(std::unique_ptr<AbstractPlayer>& player);
+	void incident3(std::unique_ptr<AbstractPlayer>& player);
+	void incident4(std::unique_ptr<AbstractPlayer>& player);
+	void incident5(std::unique_ptr<AbstractPlayer>& player);
+
 	void action(std::unique_ptr<AbstractPlayer>& player);
-  void deserialize(const json& data);
+	void deserialize(const json& data);
   
 private:
 

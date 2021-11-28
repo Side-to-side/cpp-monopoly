@@ -11,7 +11,8 @@
       "id": 1,
       "group": "humanitarian",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -20,7 +21,8 @@
       "id": 2,
       "group": "humanitarian",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -29,7 +31,8 @@
       "id": 3,
       "group": "humanitarian",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -44,7 +47,8 @@
       "id": 5,
       "group": "PE",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -53,7 +57,8 @@
       "id": 6,
       "group": "PE",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -62,7 +67,8 @@
       "id": 7,
       "group": "PE",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -83,7 +89,8 @@
       "id": 10,
       "group": "DiscreteMath",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -92,7 +99,8 @@
       "id": 11,
       "group": "DiscreteMath",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -101,7 +109,8 @@
       "id": 12,
       "group": "DiscreteMath",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -114,8 +123,10 @@
     "class": "SelectiveField",
     "properties": {
       "id": 14,
+      "group": "Selective",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -124,7 +135,8 @@
       "id": 15,
       "group": "NumericalMethods",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -133,7 +145,8 @@
       "id": 16,
       "group": "NumericalMethods",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -142,7 +155,8 @@
       "id": 17,
       "group": "NumericalMethods",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -155,8 +169,10 @@
     "class": "SelectiveField",
     "properties": {
       "id": 19,
+      "group": "Selective",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -165,7 +181,8 @@
       "id": 20,
       "group": "Physics",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -174,7 +191,8 @@
       "id": 21,
       "group": "Physics",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -183,7 +201,8 @@
       "id": 22,
       "group": "Physics",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -192,7 +211,8 @@
       "id": 23,
       "group": "Physics",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -207,7 +227,18 @@
       "id": 25,
       "group": "Programming",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
+    }
+  },
+  {
+    "class": "BasicField",
+    "properties": {
+      "id": 26,
+      "group": "Programming",
+      "cost": 1000,
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -216,7 +247,8 @@
       "id": 27,
       "group": "Programming",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -225,7 +257,8 @@
       "id": 28,
       "group": "Programming",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 4
     }
   },
   {
@@ -240,7 +273,8 @@
       "id": 30,
       "group": "DSA",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -249,7 +283,8 @@
       "id": 31,
       "group": "DSA",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -258,7 +293,8 @@
       "id": 32,
       "group": "DSA",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -267,7 +303,8 @@
       "id": 33,
       "group": "MathematicalAnalysis",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -276,7 +313,8 @@
       "id": 34,
       "group": "MathematicalAnalysis",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -285,7 +323,8 @@
       "id": 35,
       "group": "MathematicalAnalysis",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -298,8 +337,10 @@
     "class": "SelectiveField",
     "properties": {
       "id": 37,
+      "group": "Selective",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -320,7 +361,8 @@
       "id": 40,
       "group": "Circuitry",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -329,7 +371,8 @@
       "id": 41,
       "group": "Circuitry",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {
@@ -338,7 +381,8 @@
       "id": 42,
       "group": "Circuitry",
       "cost": 1000,
-      "tax": 500
+      "tax": 500,
+      "amount": 3
     }
   },
   {

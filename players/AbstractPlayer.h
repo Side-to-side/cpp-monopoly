@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <memory>
+#include <map>
 
 #include "../game/Dice.h"
 
@@ -16,6 +17,7 @@ public:
 	void setBankrot(bool bankrot);
 	void setPos(int pos);
 	void setSkip(bool skip);
+	void setPurchasedField(std::string group, int amount);
 
 	std::string getName();
 	int getID();
@@ -23,6 +25,7 @@ public:
 	bool getBankrot();
 	int getPos();
 	bool getSkip();
+	int getPurchasedField(std::string group);
 
   virtual void makeTurn() = 0;
   
@@ -33,6 +36,7 @@ protected:
 	bool bankrot;
 	int pos;
 	bool skip;
+	std::map<std::string,int> purchasedFields;
 
 private:
 

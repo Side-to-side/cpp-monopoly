@@ -51,6 +51,16 @@ void AbstractPlayer::setSkip(bool skip){
   this->skip = skip;
 }
 
+void AbstractPlayer::setPurchasedField(std::string group, int amount) {
+	auto iter = purchasedFields.find(group);
+	if (iter == purchasedFields.end()) {
+		purchasedFields.insert(make_pair(group, amount));
+	}
+	else {
+		iter->second = amount;
+	}
+}
+
 std::string AbstractPlayer::getName() {
 	return name;
 }
@@ -73,4 +83,12 @@ int AbstractPlayer::getPos() {
 
 bool AbstractPlayer::getSkip() {
 	return skip;
+}
+
+int AbstractPlayer::getPurchasedField(std::string group) {
+	auto iter = purchasedFields.find(group);
+	if (iter == purchasedFields.end())
+		return 0;
+	else return iter->second;
+
 }

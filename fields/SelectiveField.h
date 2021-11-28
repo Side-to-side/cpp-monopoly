@@ -14,23 +14,30 @@ public:
 
 	SelectiveField() : Field() {};
 
-  void setCost(int cost);
-  void setTax(int tax);
+	void setGroup(std::string g);
+	void setCost(int cost);
+	void setTax(int tax);
+	void setAmount(int amount);
 
-  int getCost();
-  int getTax();
+	std::string getGroup();
+	int getCost();
+	int getTax();
+	int getAmount();
 
-  void info(){
-    std::cout << "it's SelectiveField\n";
-  }
+	void info(){
+	  std::cout << "it's SelectiveField\n";
+	}
 
-  void buy(std::unique_ptr<AbstractPlayer>& player);
+	void buy(std::unique_ptr<AbstractPlayer>& player);
 	void sell(std::unique_ptr<AbstractPlayer>& player);
+	void pay(std::unique_ptr<AbstractPlayer>& player);e
 
 	void action(std::unique_ptr<AbstractPlayer>& player);
-  void deserialize(const json& data);
+	void deserialize(const json& data);
   
 protected:
-  int cost;
-  int tax;
+	std::string group;
+	int cost;
+	int tax;
+	int amount;
 };
