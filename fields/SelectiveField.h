@@ -29,7 +29,7 @@ public:
 
 	void action(std::unique_ptr<AbstractPlayer>& player);
   void deserialize(const json& data);
-  
+  std::string getGroup();
 protected:
   int cost;
   int tax;

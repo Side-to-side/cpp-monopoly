@@ -11,4 +11,8 @@ void GiftField::action(std::unique_ptr<AbstractPlayer>& player) {
 void GiftField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+
+std::string GiftField::getGroup() {
+	return "no group";
+}
 // functions for the GiftField class will be located here

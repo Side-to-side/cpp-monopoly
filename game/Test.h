@@ -9,8 +9,8 @@
 
 #include "../fields/Field.h"
 #include "../fields/BasicField.h"
-
-#include "MonopolyManager.h";
+#include "MonopolyManager.h"
+#include <vector>
 
 class Test {
 public:

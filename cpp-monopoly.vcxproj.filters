@@ -81,7 +81,7 @@
     <ClCompile Include="players\Bot.cpp">
       <Filter>players</Filter>
     </ClCompile>
-    <ClCompile Include="MonopolyManager.cpp">
+    <ClCompile Include="game\MonopolyManager.cpp">
       <Filter>game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -143,7 +143,7 @@
     <ClInclude Include="lib\json.hpp">
       <Filter>lib</Filter>
     </ClInclude>
-    <ClInclude Include="MonopolyManager.h">
+    <ClInclude Include="game\MonopolyManager.h">
       <Filter>game</Filter>
     </ClInclude>
   </ItemGroup>

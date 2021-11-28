@@ -12,6 +12,9 @@
 #include "../game/Dice.h"
 
 #include "../fields/Field.h"
+#include "../game/MonopolyManager.h"
+#include "Statistik.h";
+
 
 class Monopoly {
   
@@ -26,6 +29,8 @@ private:
 
 	Dice Dice1;
 	Dice Dice2;
+
+	MonopolyManager Monopolies;
 
 	std::vector<std::unique_ptr<AbstractPlayer>> players;
 	std::vector<std::unique_ptr<Field>> map;

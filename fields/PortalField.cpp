@@ -11,4 +11,7 @@ void PortalField::action(std::unique_ptr<AbstractPlayer>& player) {
 void PortalField::deserialize(const json& data) {
     data.at("id").get_to(id);
 }
+std::string PortalField::getGroup() {
+	return "no group";
+}
 // functions for the PortalField class will be located here

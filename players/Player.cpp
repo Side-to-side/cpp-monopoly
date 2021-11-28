@@ -43,9 +43,9 @@ void Player::move(){
 }
 
 void Player::trade(std::unique_ptr<AbstractPlayer>& playerToTrade) {
-	// треба доступ до поля, як чекнуть де чиє поле
+	
 }
 
 void Player::add_or_remove() {
-	// поки гребу, треба з полями це узгодить
+	// not sure what to do
 }

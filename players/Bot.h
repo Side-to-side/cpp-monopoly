@@ -12,7 +12,7 @@ public:
   Bot() : AbstractPlayer() {};
 
   void makeTurn(); 
-  void move();
+ // void move(); рух є в make_turn
   
 private:
 	

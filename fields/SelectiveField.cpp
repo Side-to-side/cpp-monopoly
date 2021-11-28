@@ -62,4 +62,7 @@ void SelectiveField::deserialize(const json& data) {
     data.at("cost").get_to(cost);
     data.at("tax").get_to(tax);
 }
+std::string SelectiveField::getGroup() {
+	return "no group";
+}
 // functions for the SelectiveField class will be located here

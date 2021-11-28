@@ -30,7 +30,10 @@ void Test::test2() {
 }
 
 void Test::test3() {
-	MonopolyManager
+	/*MonopolyManager Manager;
+	std::vector<std::unique_ptr<>> tempV;
+	tempV.push_back(1, 1);
+	Manager.monopolies_map.insert("гуманітарка", ) */
 }
 
 void Test::test4() {
