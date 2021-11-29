@@ -201,12 +201,8 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
 	}
 
 	if (getBought() != 0 && getBought() != player->getID()) {
-		//pay(player);
+		return std::move(player);
 	}
-
-
-
-
 }
 
 void BasicField::deserialize(const json& data) {
