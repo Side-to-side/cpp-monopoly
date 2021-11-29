@@ -15,11 +15,11 @@ int Player::makeTurn(){
     makeTurn();
 		break;
 	case 2:
-		//add_or_remove(players[(this->id)-1]);
-    makeTurn();
+		//add_or_remove();
+		makeTurn();
 		break;
 	case 3:
-		return move();
+		 move();
 		break;
 	default:
 		std::cout << "Unknown (skip)...\n\n";

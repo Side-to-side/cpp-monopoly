@@ -81,6 +81,9 @@
     <ClCompile Include="players\Bot.cpp">
       <Filter>players</Filter>
     </ClCompile>
+    <ClCompile Include="game\MonopolyManager.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fields\BasicField.h">
@@ -139,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="lib\json.hpp">
       <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="game\MonopolyManager.h">
+      <Filter>game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

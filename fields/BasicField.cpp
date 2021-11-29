@@ -53,6 +53,8 @@ std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> 
 		player->setCash(moneyPlayer);
 		int idPlayer = player->getID();
 		setBought(idPlayer);
+		player->setPoints(player->getPoints() + 10);
+		player->setBusiness(getGroup());
 		return std::move(player);
 	}
 }
@@ -76,6 +78,8 @@ std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer>
 		setBought(0);
 		//delete remembering the owner of field 
 		std::string group = getGroup();
+		player->removeBusiness(group);
+		player->setPoints(player->getPoints() - 5);
 		/*int amountPlayer = player->getPurchasedField(group);
 		amountPlayer--;
 		player->setPurchasedField(group, amountPlayer);*/
@@ -89,28 +93,46 @@ std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer>
 
 std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlayer> player) {
 
-    //std::vector <int> temp = upgrade_map[group];
-    for (int i = 0; i < getAmount(); i++) {
-		  /*if (temp[i] != player->getID()) {
-        return std::move(player);
-      }*/
-	  }
-    level++;
+	if (player->getBusiness(getGroup()) != getAmount()) {
+		std::cout << "You cannot upgrade\n Tip: you need to own all fields of this monopoly to upgrade\n";
+		return std::move(player);
+	}
+	
+	int upg_cost = getCost() * 0.5;
+	int pl_cash = player->getCash();
+	if (pl_cash < upg_cost) {
+		std::cout << "You are low on money. \n Tip: Try to collect rent.\n";
+		return std::move(player);
+	}
+	player->setCash(pl_cash - upg_cost);
+	level++;
+	setTax(getTax() * 1.25);
+	player->setPoints(player->getPoints() + 3);
+	std::cout << "You've sucessfully upgraded the field!\n";
+	return std::move(player);
 }
 
 
 std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPlayer> player) {
-	int level = getLevel();
-	if (level == 0) {
+	if (player->getBusiness(getGroup()) != getAmount()) {
+		std::cout << "You cannot downgrade the field\n Tip: you need to own all fields of this monopoly to downgrate\n";
+		return std::move(player);
+	}
+	
+	int level_t = getLevel();
+	if (level_t == 0) {
 		std::cout << "You have the minimum field level " << std::endl;
 		return std::move(player);;
 	}
 	else { //level>0
 		int moneyPlayer = player->getCash();
-		int costDowngrade = (getCost() / 2) * 0.75;
+		int costDowngrade = getCost() * 1.5;
+		setTax(getTax() / 1.25);
+		player->removeBusiness(getGroup());
 		moneyPlayer += costDowngrade;
+		player->setCash(moneyPlayer);
+		player->setPoints(player->getPoints() - 2);
 		level--;
-		setLevel(level);
 	}
   return std::move(player);
 }
