@@ -1,7 +1,7 @@
 #include "PolyanaField.h"
 
-void PolyanaField::action(std::unique_ptr<AbstractPlayer>& player) {
-
+std::unique_ptr<AbstractPlayer> PolyanaField::action(std::unique_ptr<AbstractPlayer> player) {
+  return std::move(player);
 }
 
 void PolyanaField::deserialize(const json& data) {

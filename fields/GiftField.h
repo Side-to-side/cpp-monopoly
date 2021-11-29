@@ -19,7 +19,7 @@ public:
   void info(){
     std::cout << "it's GiftField\n";
   }
-	void action(std::unique_ptr<AbstractPlayer>& player);
+	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
   void deserialize(const json& data);
   
 private:

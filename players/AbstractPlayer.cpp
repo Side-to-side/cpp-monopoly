@@ -3,17 +3,27 @@
 AbstractPlayer::AbstractPlayer() {
 	name = "";
 	id = 0;
-	cash = 0;
+	cash = 15000;
 	bankrot = 0;
 	pos = 0;
 	skip = 0;
+  bot = true;
+  std::vector<int> tempV = { };
+
+	std::string groups[9] = { "humanitarian","PE","DiscreteMath", "NumericalMethods",
+		"Physics",  "DSA",
+	"MathematicalAnalysis", "Circuitry", "Programming" };
+	int k_iter = 0;
+	while (k_iter < 9) {
+		bussines.insert(std::make_pair(groups[k_iter], tempV));
+		k_iter++;
+	}
 }
 
 AbstractPlayer::AbstractPlayer(const std::string& name, int Playerid) {
 	this->name = name;
 	this->id = Playerid;
-	cash = 0;
-	bankrot = 0;
+	cash = 15000;
 	pos = 0;
 	skip = 0;
 }
@@ -25,6 +35,8 @@ AbstractPlayer::AbstractPlayer(const AbstractPlayer& p) {
 	bankrot = p.bankrot;
 	pos = p.pos;
 	skip = p.skip;
+  bot = p.bot;
+  bussines = p.bussines;
 }
 
 void AbstractPlayer::setName(const std::string name) {
@@ -51,6 +63,14 @@ void AbstractPlayer::setSkip(bool skip){
   this->skip = skip;
 }
 
+void AbstractPlayer::setBot(bool bot) {
+  this->bot = bot;
+}
+
+void AbstractPlayer::setBussines(std::string key) {
+	bussines[key].push_back(1);
+}
+
 std::string AbstractPlayer::getName() {
 	return name;
 }
@@ -73,4 +93,11 @@ int AbstractPlayer::getPos() {
 
 bool AbstractPlayer::getSkip() {
 	return skip;
+}
+
+bool AbstractPlayer::getBot() {
+  return bot;
+}
+int AbstractPlayer::getBussines(std::string key) {
+	return bussines[key].size();
 }

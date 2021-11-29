@@ -1,11 +1,12 @@
 #include "GiftField.h"
 
-void GiftField::action(std::unique_ptr<AbstractPlayer>& player) {
+std::unique_ptr<AbstractPlayer> GiftField::action(std::unique_ptr<AbstractPlayer> player) {
 	std::random_device generation;
 	int value = (generation() % 50 + 1) * 100;
 	int cash = player->getCash();
 	cash += value;
 	player->setCash(cash);
+  return std::move(player);
 }
 
 void GiftField::deserialize(const json& data) {

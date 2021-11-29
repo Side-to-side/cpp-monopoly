@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <unordered_map>
 
 #include "../players/AbstractPlayer.h"
 
@@ -17,7 +18,7 @@ public:
 	int getBought();
 
   virtual void info() = 0;
-  virtual void action(std::unique_ptr<AbstractPlayer>& player) = 0;
+  virtual std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player) = 0;
   virtual void deserialize(const json& data) = 0;
 
 protected:
@@ -27,3 +28,4 @@ protected:
 private:
 
 };
+

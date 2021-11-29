@@ -17,7 +17,13 @@ public:
   void info(){
     std::cout << "it's QuestionField\n";
   }
-	void action(std::unique_ptr<AbstractPlayer>& player);
+  void incident1(std::unique_ptr<AbstractPlayer>& player);
+	void incident2(std::unique_ptr<AbstractPlayer>& player);
+	void incident3(std::unique_ptr<AbstractPlayer>& player);
+	void incident4(std::unique_ptr<AbstractPlayer>& player);
+	void incident5(std::unique_ptr<AbstractPlayer>& player);
+
+	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);
   void deserialize(const json& data);
   
 private:

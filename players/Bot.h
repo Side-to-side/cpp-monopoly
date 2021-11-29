@@ -11,6 +11,7 @@ public:
 	Bot(const std::string& Name, int Playerid)
 		: AbstractPlayer(Name, Playerid) {
       bankrot = false;
+      bot = true;
     };
 
   Bot() : AbstractPlayer() {};

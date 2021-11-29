@@ -44,9 +44,8 @@ void Test::test3() {
 void Test::test4() {
 	std::cout << "Test 4:\n";
 	std::cout << "check class constructor BasicField, ";
-	std::cout << "the output should be\nid: 3\ncost: 0\n\noutput\n";
+	std::cout << "the output should be\nid: 3\n\n";
 	BasicField f(3);
 	std::cout << "id: " << f.getID() << std::endl;
-	std::cout << "cost: " << f.getCost() << std::endl;
 	std::cout << "--------------------------------\n";
 }

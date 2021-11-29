@@ -1,11 +1,12 @@
 #include "PortalField.h"
 
-void PortalField::action(std::unique_ptr<AbstractPlayer>& player) {
+std::unique_ptr<AbstractPlayer> PortalField::action(std::unique_ptr<AbstractPlayer> player) {
 	
   std::random_device generation;
 
   player->setPos(generation() % 44);
 
+  return std::move(player);
 }
 
 void PortalField::deserialize(const json& data) {

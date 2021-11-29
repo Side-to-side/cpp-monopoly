@@ -3,6 +3,9 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <unordered_map>
+
+#include "MonopolyManager.h"
 
 #include "../players/AbstractPlayer.h"
 #include "../players/Bot.h"
@@ -12,6 +15,7 @@
 #include "../game/Dice.h"
 
 #include "../fields/Field.h"
+
 
 class Monopoly {
   

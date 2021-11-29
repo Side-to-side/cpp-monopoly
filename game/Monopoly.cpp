@@ -23,8 +23,23 @@ void Monopoly::startGame() {
 		players.push_back(std::make_unique<Bot>(a));
 		id++;
 	}
+  
+  MonopolyManager upgrating;
+ std::cout << upgrating.getMapId().begin()->first;
+ std::cout << upgrating.getMapId().begin()->second.size();
 
+ std::cout << upgrating.getMapId()["humanitarian"].size();
+ std::cout << upgrating.getMapId()["PE"].size();
+ std::cout << upgrating.getMapId()["Programming"].size();
+ 
+  /*std::vector <int> temp = upgrating[group];
+    for (int i = 0; i < getAmount(); i++) {
+		  /*if (temp[i] != player->getID()) {
+        return std::move(player);
+      }*/
+	 // }
 	mapMonopoly = fieldCreation();
+
 }
 
 void Monopoly::updateGame() {
@@ -39,8 +54,13 @@ void Monopoly::updateGame() {
     if(players[id_player]->getBankrot() == true){
        continue;
     }
-	  players[id_player]->makeTurn();
+
+	  int tmpField = players[id_player]->makeTurn();
+    
+    players[id_player] = mapMonopoly[tmpField]->action(std::move(players[id_player]));
+
     id_player++;
+
     id_player %= players.size();
   }
 

@@ -16,4 +16,5 @@ int Bot::makeTurn(){
   
   std::cout << name << " moved to field " << pos << "\n";
   std::cout << "---------------------------\n";
+  return pos;
 }
