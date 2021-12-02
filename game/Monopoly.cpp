@@ -36,14 +36,16 @@ void Monopoly::updateGame() {
 	
   int number_players = players.size();
   int id_player = 0;
+
   Statistik stats(number_players);
+
   while(number_players > 1){
-	  
-    if(players[id_player]->getBankrot() == true){
+	  if(players[id_player]->getBankrot() == true){
        continue;
     }
 	  int tmpField = players[id_player]->makeTurn();
-	  players[id_player] = mapMonopoly[tmpField]->action(std::move(players[id_player]));
+	  
+    players[id_player] = mapMonopoly[tmpField]->action(std::move(players[id_player]));
 	  
 	  stats.update_pt(id_player, players[id_player]->getPoints());
 	  

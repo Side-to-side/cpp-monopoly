@@ -1,20 +1,19 @@
 #include "Bot.h"
 
 int Bot::makeTurn(){
-  std::cout << "\nplayer number " << id << " chooses:\n";
-  std::cout << name << " made the decision to roll the dice\n\n";
+  View display;
 
+display.throwDiceBot(id);
   Dice Dice1, Dice2;
   Dice1.randValue();
 	Dice2.randValue();
+display.firstDiceValue(Dice1.getValue());
+display.secondDiceValue(Dice2.getValue());
 
-  std::cout << "On the first bone: " << Dice1.getValue() << std::endl;
-  std::cout << "On the second bone: " << Dice2.getValue() << std::endl;
 
   pos += Dice1.getValue() + Dice2.getValue();
   pos %= 44;
-  
-  std::cout << name << " moved to field " << pos << "\n";
-  std::cout << "---------------------------\n";
+  display.movedField(name, pos);
+
   return pos;
 }

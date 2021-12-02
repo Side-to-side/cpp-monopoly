@@ -43,9 +43,10 @@ void BasicField::info() {
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> player) {
+  View display;
 	int moneyPlayer = player->getCash();
  	if (moneyPlayer < getCost()) {
-		std::cout << "No enough money :(" << std::endl;
+		display.lowMoney();
 		return std::move(player);
 	}
 	else {
@@ -60,15 +61,15 @@ std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> 
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer> player) {
-
+  View display;
 	int level = getLevel();
 
 	if (level < 0) {
-		std::cout << "ERROR" << std::endl;
+    display.showErr();
 		return std::move(player);
 	}
 	if (level > 0) {
-		std::cout << "You can't sell the field, because you have an improved fields" << std::endl;
+    display.notSellImField();
 		return std::move(player);
 	}
 	else {  // level == 0
@@ -86,42 +87,39 @@ std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer>
 		return std::move(player);
 
 	}
-	
-
 }
-
-
 std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlayer> player) {
-
+  View display;
 	if (player->getBusiness(getGroup()) != getAmount()) {
-		std::cout << "You cannot upgrade\n Tip: you need to own all fields of this monopoly to upgrade\n";
+    display.notUpgNoMonop();
 		return std::move(player);
 	}
 	
 	int upg_cost = getCost() * 0.5;
 	int pl_cash = player->getCash();
 	if (pl_cash < upg_cost) {
-		std::cout << "You are low on money. \n Tip: Try to collect rent.\n";
+		
 		return std::move(player);
 	}
 	player->setCash(pl_cash - upg_cost);
 	level++;
 	setTax(getTax() * 1.25);
 	player->setPoints(player->getPoints() + 3);
-	std::cout << "You've sucessfully upgraded the field!\n";
+  display.sucUpg();
 	return std::move(player);
 }
 
 
 std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPlayer> player) {
+  View display;
 	if (player->getBusiness(getGroup()) != getAmount()) {
-		std::cout << "You cannot downgrade the field\n Tip: you need to own all fields of this monopoly to downgrate\n";
+    display.notDownNoMonop();
 		return std::move(player);
 	}
 	
 	int level_t = getLevel();
 	if (level_t == 0) {
-		std::cout << "You have the minimum field level " << std::endl;
+    display.minLevel();
 		return std::move(player);;
 	}
 	else { //level>0
@@ -138,22 +136,19 @@ std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPl
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlayer> player) {
-  
-	int opt = 0;
-
+  Model option;
+  View display;
 	if (getBought() == 0) {
 
     if(player->getBot() == true){
-      std::cout << player->getName() << " decided to buy a field\n";
+      display.BotBuy();
+     
       player = buy(std::move(player));
       return std::move(player);
     }
 
-		std::cout << "Choose an action:\n"
-			<< "1. Buy the field\n"
-			<< "Other value - cancel(skip)\n";
-		std::cin >> opt;
-		switch (opt) {
+    display.actionBuyPlayer();
+		switch (option.inputOpt()) {
 		case 1:
 			player = buy(std::move(player));
       return std::move(player);
@@ -172,19 +167,15 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
     }
 
 		while (1) {
-			std::cout << "Choose an action:\n"
-				<< "1. Sell the field\n"
-				<< "2. Upgrade the field\n"
-				<< "3. Downgrade the field\n"
-				<< "Other value - cancel(skip)\n";
-			std::cin >> opt;
-			switch (opt) {
+      display.playerField();
+			switch (option.inputOpt()) {
 			case 1:
         player = sell(std::move(player));
 				return std::move(player);
 			case 2:
-				if (counterUpgrade == 1)
-					std::cout << "You have already upgrated the field in this step" << std::endl;
+				if (counterUpgrade == 1){
+          display.alreadyUpgrade();
+        }
 				else {
           player = upgrade(std::move(player));
 					counterUpgrade++;
