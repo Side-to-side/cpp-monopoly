@@ -32,28 +32,25 @@ int SelectiveField::getAmount() {
 	return amount;
 }
 
-void SelectiveField::buy(std::unique_ptr<AbstractPlayer>& player) {
+std::unique_ptr<AbstractPlayer> SelectiveField::buy(std::unique_ptr<AbstractPlayer> player) {
+  View display;
 	int moneyPlayer = player->getCash();
-	int cost = getCost();
-	if (moneyPlayer < cost) {
-		std::cout << "No enough money :(" << std::endl;
-		return;
+ 	if (moneyPlayer < getCost()) {
+     display.noEnoughMoney();
+		return std::move(player);
 	}
 	else {
-		moneyPlayer -= cost;
+		moneyPlayer -=  getCost();
 		player->setCash(moneyPlayer);
 		int idPlayer = player->getID();
 		setBought(idPlayer);
-		//remembering the owner of field;
-		std::string group = getGroup();
-		//int amountPlayer = player->getPurchasedField(group);
-		//amountPlayer++;
-		//player->setPurchasedField(group, amountPlayer);
-		return;
+		player->setPoints(player->getPoints() + 10);
+		player->setBusiness(getGroup());
+		return std::move(player);
 	}
 }
 
-void SelectiveField::sell(std::unique_ptr<AbstractPlayer>& player) {
+std::unique_ptr<AbstractPlayer> SelectiveField::sell(std::unique_ptr<AbstractPlayer> player) {
 	int moneyPlayer = player->getCash();
 	int costSell = getCost() * 0.75;
 	moneyPlayer += costSell;
@@ -64,7 +61,7 @@ void SelectiveField::sell(std::unique_ptr<AbstractPlayer>& player) {
 	//int amountPlayer = player->getPurchasedField(group);
 	//amountPlayer--;
 	//player->setPurchasedField(group, amountPlayer);
-	return;
+	return std::move(player);;
 }
 
 void SelectiveField::pay(std::unique_ptr<AbstractPlayer>& player) {
@@ -72,41 +69,37 @@ void SelectiveField::pay(std::unique_ptr<AbstractPlayer>& player) {
 }
 
 std::unique_ptr<AbstractPlayer> SelectiveField::action(std::unique_ptr<AbstractPlayer> player) {
+  View display;
+  Model option;
   if(player->getBot() == true){
     return std::move(player);
   }
-	/*int bought = getBought();
+
+	int bought = getBought();
 	int idPlayer = player->getID();
 	int opt = 0;
 
 	if (bought == -1) {
-		std::cout << "ERROR" << std::endl;
+    display.showErr();
 		return std::move(player);
 	}
 
 	if (bought == 0) {
-		std::cout << "Choose an action:\n"
-			<< "1. Buy the field\n"
-			<< "Other value - cancel(skip)\n";
+    display.actionBuyPlayer();
 		std::cin >> opt;
 		switch (opt) {
 		case 1:
 			//buy(player);
         return std::move(player);
-			  break;
 		default:
         return std::move(player);
-			  break;
 		}
 	}
 
 	bought = getBought();
 	if (bought == idPlayer) {
-		std::cout << "Choose an action:\n"
-			<< "1. Sell the field\n"
-			<< "Other value - cancel(skip)\n";
-		std::cin >> opt;
-		switch (opt) {
+    display.actionSellPlayer();
+		switch (option.inputOpt()) {
 		case 1:
 			//sell(player);
 			return std::move(player);
@@ -117,7 +110,7 @@ std::unique_ptr<AbstractPlayer> SelectiveField::action(std::unique_ptr<AbstractP
 
 	if (bought != 0 && bought != idPlayer) {
 		//pay(player);
-	}*/
+	}
   return std::move(player);
 }
 

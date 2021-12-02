@@ -151,6 +151,7 @@
     <ClCompile Include="game\Actions.cpp" />
     <ClCompile Include="game\Dice.cpp" />
     <ClCompile Include="game\Monopoly.cpp" />
+    <ClCompile Include="game\MonopolyManager.cpp" />
     <ClCompile Include="game\Statistik.cpp" />
     <ClCompile Include="game\Test.cpp" />
     <ClCompile Include="main.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="game\Actions.h" />
     <ClInclude Include="game\Dice.h" />
     <ClInclude Include="game\Monopoly.h" />
+    <ClInclude Include="game\MonopolyManager.h" />
     <ClInclude Include="game\Statistik.h" />
     <ClInclude Include="game\Test.h" />
     <ClInclude Include="lib\json.hpp" />

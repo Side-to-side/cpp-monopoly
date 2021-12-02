@@ -13,6 +13,7 @@
 #include "../players/Player.h"
 
 #include "../game/MonopolyManager.h"
+#include "../game/Monopoly.h"
 
 class BasicField : public Field {
 public:

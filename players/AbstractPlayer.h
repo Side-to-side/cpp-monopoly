@@ -19,7 +19,8 @@ public:
 	void setPos(int pos);
 	void setSkip(bool skip);
   void setBot(bool bot);
-  void setBussines(std::string key);
+  void setBusiness(std::string key);
+  void setPoints(int points);
 
 	std::string getName();
 	int getID();
@@ -28,7 +29,9 @@ public:
 	int getPos();
 	bool getSkip();
 	bool getBot();
-	int getBussines(std::string key);
+	int getPoints();
+	int getBusiness(std::string key);
+	void removeBusiness(std::string key);
   virtual int makeTurn() = 0;
   
 protected:
@@ -38,7 +41,8 @@ protected:
 	bool bankrot;
 	int pos;
 	bool skip;
+	int points;
   bool bot = true;
-  std::unordered_map<std::string, std::vector<int>> bussines;
+  std::unordered_map<std::string, std::vector<int>> business;
 
 };

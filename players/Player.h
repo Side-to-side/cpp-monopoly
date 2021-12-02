@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "AbstractPlayer.h"
+#include "../game/Monopoly.h"
 
 class Player : public AbstractPlayer {
 public:

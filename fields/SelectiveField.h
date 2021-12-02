@@ -6,6 +6,8 @@
 #include "../players/Bot.h"
 #include "../players/Player.h"
 
+#include "../game/Monopoly.h"
+
 class SelectiveField : public Field {
 public:
 
@@ -28,8 +30,8 @@ public:
 	  std::cout << "it's SelectiveField\n";
 	}
 
-	void buy(std::unique_ptr<AbstractPlayer>& player);
-	void sell(std::unique_ptr<AbstractPlayer>& player);
+	std::unique_ptr<AbstractPlayer> buy(std::unique_ptr<AbstractPlayer> player);
+	std::unique_ptr<AbstractPlayer> sell(std::unique_ptr<AbstractPlayer> player);
 	void pay(std::unique_ptr<AbstractPlayer>& player);
 
 	std::unique_ptr<AbstractPlayer> action(std::unique_ptr<AbstractPlayer> player);

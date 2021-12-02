@@ -8,6 +8,8 @@
 #include "../players/Bot.h"
 #include "../players/Player.h"
 
+#include "../game/Monopoly.h"
+
 class PortalField : public Field {
 public:
 

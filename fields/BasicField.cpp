@@ -43,9 +43,10 @@ void BasicField::info() {
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> player) {
+  View display;
 	int moneyPlayer = player->getCash();
  	if (moneyPlayer < getCost()) {
-		std::cout << "No enough money :(" << std::endl;
+		display.lowMoney();
 		return std::move(player);
 	}
 	else {
@@ -53,20 +54,22 @@ std::unique_ptr<AbstractPlayer> BasicField::buy(std::unique_ptr<AbstractPlayer> 
 		player->setCash(moneyPlayer);
 		int idPlayer = player->getID();
 		setBought(idPlayer);
+		player->setPoints(player->getPoints() + 10);
+		player->setBusiness(getGroup());
 		return std::move(player);
 	}
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer> player) {
-
+  View display;
 	int level = getLevel();
 
 	if (level < 0) {
-		std::cout << "ERROR" << std::endl;
+    display.showErr();
 		return std::move(player);
 	}
 	if (level > 0) {
-		std::cout << "You can't sell the field, because you have an improved fields" << std::endl;
+    display.notSellImField();
 		return std::move(player);
 	}
 	else {  // level == 0
@@ -76,62 +79,76 @@ std::unique_ptr<AbstractPlayer> BasicField::sell(std::unique_ptr<AbstractPlayer>
 		setBought(0);
 		//delete remembering the owner of field 
 		std::string group = getGroup();
+		player->removeBusiness(group);
+		player->setPoints(player->getPoints() - 5);
 		/*int amountPlayer = player->getPurchasedField(group);
 		amountPlayer--;
 		player->setPurchasedField(group, amountPlayer);*/
 		return std::move(player);
 
 	}
-	
-
 }
-
-
 std::unique_ptr<AbstractPlayer> BasicField::upgrade(std::unique_ptr<AbstractPlayer> player) {
-
-    //std::vector <int> temp = upgrade_map[group];
-    for (int i = 0; i < getAmount(); i++) {
-		  /*if (temp[i] != player->getID()) {
-        return std::move(player);
-      }*/
-	  }
-    level++;
+  View display;
+	if (player->getBusiness(getGroup()) != getAmount()) {
+    display.notUpgNoMonop();
+		return std::move(player);
+	}
+	
+	int upg_cost = getCost() * 0.5;
+	int pl_cash = player->getCash();
+	if (pl_cash < upg_cost) {
+		
+		return std::move(player);
+	}
+	player->setCash(pl_cash - upg_cost);
+	level++;
+	setTax(getTax() * 1.25);
+	player->setPoints(player->getPoints() + 3);
+  display.sucUpg();
+	return std::move(player);
 }
 
 
 std::unique_ptr<AbstractPlayer> BasicField::downgrade(std::unique_ptr<AbstractPlayer> player) {
-	int level = getLevel();
-	if (level == 0) {
-		std::cout << "You have the minimum field level " << std::endl;
+  View display;
+	if (player->getBusiness(getGroup()) != getAmount()) {
+    display.notDownNoMonop();
+		return std::move(player);
+	}
+	
+	int level_t = getLevel();
+	if (level_t == 0) {
+    display.minLevel();
 		return std::move(player);;
 	}
 	else { //level>0
 		int moneyPlayer = player->getCash();
-		int costDowngrade = (getCost() / 2) * 0.75;
+		int costDowngrade = getCost() * 1.5;
+		setTax(getTax() / 1.25);
+		player->removeBusiness(getGroup());
 		moneyPlayer += costDowngrade;
+		player->setCash(moneyPlayer);
+		player->setPoints(player->getPoints() - 2);
 		level--;
-		setLevel(level);
 	}
   return std::move(player);
 }
 
 std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlayer> player) {
-  
-	int opt = 0;
-
+  Model option;
+  View display;
 	if (getBought() == 0) {
 
     if(player->getBot() == true){
-      std::cout << player->getName() << " decided to buy a field\n";
+      display.BotBuy();
+     
       player = buy(std::move(player));
       return std::move(player);
     }
 
-		std::cout << "Choose an action:\n"
-			<< "1. Buy the field\n"
-			<< "Other value - cancel(skip)\n";
-		std::cin >> opt;
-		switch (opt) {
+    display.actionBuyPlayer();
+		switch (option.inputOpt()) {
 		case 1:
 			player = buy(std::move(player));
       return std::move(player);
@@ -150,19 +167,15 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
     }
 
 		while (1) {
-			std::cout << "Choose an action:\n"
-				<< "1. Sell the field\n"
-				<< "2. Upgrade the field\n"
-				<< "3. Downgrade the field\n"
-				<< "Other value - cancel(skip)\n";
-			std::cin >> opt;
-			switch (opt) {
+      display.playerField();
+			switch (option.inputOpt()) {
 			case 1:
         player = sell(std::move(player));
 				return std::move(player);
 			case 2:
-				if (counterUpgrade == 1)
-					std::cout << "You have already upgrated the field in this step" << std::endl;
+				if (counterUpgrade == 1){
+          display.alreadyUpgrade();
+        }
 				else {
           player = upgrade(std::move(player));
 					counterUpgrade++;
@@ -179,12 +192,8 @@ std::unique_ptr<AbstractPlayer> BasicField::action(std::unique_ptr<AbstractPlaye
 	}
 
 	if (getBought() != 0 && getBought() != player->getID()) {
-		//pay(player);
+		return std::move(player);
 	}
-
-
-
-
 }
 
 void BasicField::deserialize(const json& data) {

@@ -7,6 +7,8 @@
 #include "../players/Bot.h"
 #include "../players/Player.h"
 
+#include "../game/Monopoly.h"
+
 class GiftField : public Field {
 public:
 
